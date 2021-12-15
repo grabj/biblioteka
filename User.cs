@@ -15,7 +15,6 @@ namespace Projekt
         private string _name;
         private string _surname;
         private string _email;
-        private DateTime _dateOfBirth;
 
         public uint ID
         {
@@ -37,25 +36,19 @@ namespace Projekt
             get => _email;
             set => _email = value;
         }
-        public DateTime DateOfBirth
-        {
-            get => _dateOfBirth;
-            set => _dateOfBirth = value;
-        }
 
         public User()
         {
             _numOfUsers++;
             this.ID = _numOfUsers;
         }
-        public User(int iD, string name, string surname, string email, DateTime dateOfBirth)
+        public User(int iD, string name, string surname, string email)
         {
             _numOfUsers++;
             this.ID = _numOfUsers;
             _name = name;
             _surname = surname;
             _email = email;
-            _dateOfBirth = dateOfBirth;
             //test 3
         }
     }
