@@ -55,7 +55,8 @@ namespace Projekt
             _name = name;
             _surname = surname;
             _email = email;
-            _dateOfBirth = dateOfBirth;//
+            _dateOfBirth = dateOfBirth;
+            //test 3
         }
     }
 }
