@@ -338,3 +338,11 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Form1.cs
+/Form1.Designer.cs
+/Form1.resx
+/Logowanie.cs
+/Logowanie.Designer.cs
+/Logowanie.resx
+/Program.cs
+/User.cs

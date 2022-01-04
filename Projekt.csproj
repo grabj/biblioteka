@@ -46,26 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Form1.cs">
+    <Compile Include="CodeBehind\KlasaDoWyrzucenia.cs" />
+    <Compile Include="View\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Logowanie.cs">
+    <Compile Include="View\LogInView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Logowanie.Designer.cs">
-      <DependentUpon>Logowanie.cs</DependentUpon>
+    <Compile Include="View\LogInView.Designer.cs">
+      <DependentUpon>LogInView.cs</DependentUpon>
     </Compile>
     <Compile Include="CodeBehind\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CodeBehind\User.cs" />
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Logowanie.resx">
-      <DependentUpon>Logowanie.cs</DependentUpon>
+    <EmbeddedResource Include="View\LogInView.resx">
+      <DependentUpon>LogInView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
