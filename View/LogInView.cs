@@ -10,23 +10,30 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    public partial class Logowanie : Form
+    public partial class LogInView : Form
     {
-        public Logowanie()
+        public LogInView()
         {
             InitializeComponent();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 okno = new Form1();
+            Menu menuGuest = new Menu();
             this.Hide();
-            okno.Show();
+            menuGuest.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //if (textBox1 == "admin")
+            //Form1 menuAdmin = new Form1();
+
         }
     }
 }

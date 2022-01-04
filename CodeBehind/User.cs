@@ -49,8 +49,6 @@ namespace Projekt
             _name = name;
             _surname = surname;
             _email = email;
-            // test 4
-            // test 5
         }
     }
 }
