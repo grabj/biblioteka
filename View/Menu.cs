@@ -32,5 +32,10 @@ namespace Projekt
         {
             Application.Exit();
         }
+
+        public virtual void statusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("\n ", "Stan konta");
+        }
     }
 }
