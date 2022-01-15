@@ -24,6 +24,7 @@ namespace Projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             MenuGuestView menuGuest = new MenuGuestView();
             this.Hide();
             menuGuest.Show();
