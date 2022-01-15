@@ -31,6 +31,11 @@ namespace Projekt
         {
             this.components = new System.ComponentModel.Container();
             button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            button5.Visible = false;
+            tabControl1.Enabled = false;
         }
         
         #endregion
