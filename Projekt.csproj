@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeBehind\Admin.cs" />
-    <Compile Include="CodeBehind\Book.cs" />
-    <Compile Include="CodeBehind\Librarian.cs" />
-    <Compile Include="CodeBehind\Reader.cs" />
+    <Compile Include="CodeBehind\objects\Admin.cs" />
+    <Compile Include="CodeBehind\objects\Book.cs" />
+    <Compile Include="CodeBehind\objects\Librarian.cs" />
+    <Compile Include="CodeBehind\objects\Reader.cs" />
     <Compile Include="View\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,7 +64,7 @@
     </Compile>
     <Compile Include="CodeBehind\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CodeBehind\User.cs" />
+    <Compile Include="CodeBehind\objects\User.cs" />
     <Compile Include="View\MenuGuestView.cs">
       <SubType>Form</SubType>
     </Compile>
