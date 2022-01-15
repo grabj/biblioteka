@@ -15,9 +15,9 @@ namespace Projekt
             InitializeComponent();
         }
 
-/*        public override void button1_Click(object sender, EventArgs e)
+        public override void statusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("dziedzic");
-        }*/
+            MessageBox.Show("Brak danych. Zarejestruj się!", "Stan konta");
+        }
     }
 }
