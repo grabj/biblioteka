@@ -8,10 +8,10 @@ namespace Projekt
 {
     class Admin : User
     {
-        public Admin(uint id = 1, string name = "admin", string surname = null, string email = null, string password = "admin") : base(name, surname, email)
+        public Admin(uint id = 1, string lastName = "admin", string firstName = null, string email = null, string password = "admin") : base(lastName, firstName, email)
         {
             ID = id;
-            Login = name + ID;
+            Login = lastName + ID;
             Password = password;
         }
 

@@ -10,7 +10,7 @@ namespace Projekt
     {
         private static uint numOfLibrarians;
 
-        public Librarian(string name, string surname, string email) : base(name, surname, email)
+        public Librarian(string firstName, string lastName, string email) : base(firstName, lastName, email)
         {
             numOfLibrarians++;
             ID = numOfLibrarians + 10;

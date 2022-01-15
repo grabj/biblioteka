@@ -34,6 +34,8 @@ namespace Projekt
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.signupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,8 +47,6 @@ namespace Projekt
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.signupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -84,6 +84,17 @@ namespace Projekt
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.optionsToolStripMenuItem.Text = "Opcje";
+            // 
+            // signupToolStripMenuItem
+            // 
+            this.signupToolStripMenuItem.Name = "signupToolStripMenuItem";
+            this.signupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.signupToolStripMenuItem.Text = "Zarejestruj się";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // logoutToolStripMenuItem
             // 
@@ -186,17 +197,6 @@ namespace Projekt
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Użytkownicy";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // signupToolStripMenuItem
-            // 
-            this.signupToolStripMenuItem.Name = "signupToolStripMenuItem";
-            this.signupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.signupToolStripMenuItem.Text = "Zarejestruj się";
             // 
             // Menu
             // 

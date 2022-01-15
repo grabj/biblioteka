@@ -8,26 +8,26 @@ namespace Projekt
 {
     abstract class User
     {
-        private string _name;
-        private string _surname;
+        private string _firstName;
+        private string _lastName;
         private string _email;
 
-        public User(string name, string surname, string email)
+        public User(string firstName, string lastName, string email)
         {
-            _name = name;
-            _surname = surname;
+            _firstName = firstName;
+            _lastName = lastName;
             _email = email;
         }
 
-        public string Name
+        public string FirstName
         {
-            get => _name;
-            set => _name = value;
+            get => _firstName;
+            set => _firstName = value;
         }
-        public string Surname
+        public string LastName
         {
-            get => _surname;
-            set => _surname = value;
+            get => _lastName;
+            set => _lastName = value;
         }
         public string Email
         {

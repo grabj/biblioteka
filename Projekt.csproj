@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodeBehind\Admin.cs" />
+    <Compile Include="CodeBehind\Book.cs" />
     <Compile Include="CodeBehind\Librarian.cs" />
     <Compile Include="CodeBehind\Reader.cs" />
     <Compile Include="View\Menu.cs">
@@ -100,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CodeBehind\data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
