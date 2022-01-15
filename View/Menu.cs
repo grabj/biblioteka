@@ -16,26 +16,21 @@ namespace Projekt
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        public virtual void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("rodzic");
         }
 
-        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            LogInView logInView1 = new LogInView();
+            this.Dispose();
+            logInView1.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

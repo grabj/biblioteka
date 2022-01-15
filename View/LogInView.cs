@@ -24,7 +24,8 @@ namespace Projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu menuGuest = new Menu();
+
+            MenuGuestView menuGuest = new MenuGuestView();
             this.Hide();
             menuGuest.Show();
         }
@@ -33,7 +34,9 @@ namespace Projekt
         {
             //if (textBox1 == "admin")
             //Form1 menuAdmin = new Form1();
-
+            Menu menuUser = new Menu();
+            this.Hide();
+            menuUser.Show();
         }
     }
 }
