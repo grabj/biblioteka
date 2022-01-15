@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeBehind\Admin.cs" />
+    <Compile Include="CodeBehind\Librarian.cs" />
+    <Compile Include="CodeBehind\Reader.cs" />
     <Compile Include="View\Menu.cs">
       <SubType>Form</SubType>
     </Compile>

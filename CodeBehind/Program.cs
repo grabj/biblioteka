@@ -17,8 +17,7 @@ namespace Projekt
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LogInView());
-            User userro = new User();
-            User nachoTaco = new User();
+
             
         }
     }

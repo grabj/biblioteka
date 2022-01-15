@@ -32,8 +32,11 @@ namespace Projekt
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //if (textBox1 == "admin")
-            //Form1 menuAdmin = new Form1();
+            if (textBox1.Text == "admin" && textBox2.Text == "admin")
+            {
+                MessageBox.Show("");
+            }
+            
             Menu menuUser = new Menu();
             this.Hide();
             menuUser.Show();

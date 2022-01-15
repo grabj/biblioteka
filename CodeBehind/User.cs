@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class User
+    abstract class User
     {
-        private static uint _numOfUsers;
-        public static uint NumOfClients => _numOfUsers;
-
-        private uint _ID;
         private string _name;
         private string _surname;
         private string _email;
 
-        public uint ID
+        public User(string name, string surname, string email)
         {
-            get => _ID;
-            set => _ID = value;
+            _name = name;
+            _surname = surname;
+            _email = email;
         }
+
         public string Name
         {
             get => _name;
@@ -35,20 +33,6 @@ namespace Projekt
         {
             get => _email;
             set => _email = value;
-        }
-
-        public User()
-        {
-            _numOfUsers++;
-            this.ID = _numOfUsers;
-        }
-        public User(int iD, string name, string surname, string email)
-        {
-            _numOfUsers++;
-            this.ID = _numOfUsers;
-            _name = name;
-            _surname = surname;
-            _email = email;
         }
     }
 }
