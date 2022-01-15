@@ -10,7 +10,7 @@ namespace Projekt
     {
         private static uint numOfReaders;
 
-        public Reader(string firstName, string lastName, string email) : base(firstName, lastName, email)
+        public Reader(string firstName, string lastName, string email, string password) : base(firstName, lastName, email, password)
         {
             numOfReaders++;
             ID = numOfReaders + 1000;

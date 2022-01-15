@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    abstract class User
+    public abstract class User
     {
         private string _firstName;
         private string _lastName;
         private string _email;
+        private string _password;
 
-        public User(string firstName, string lastName, string email)
+        public User(string firstName, string lastName, string email, string password)
         {
             _firstName = firstName;
             _lastName = lastName;
             _email = email;
+            _password = password;
         }
 
         public string FirstName
@@ -33,6 +35,11 @@ namespace Projekt
         {
             get => _email;
             set => _email = value;
+        }
+        public string Password
+        {
+            get => _password;
+            set => _password = value;
         }
     }
 }
