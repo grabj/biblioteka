@@ -12,8 +12,8 @@ namespace Projekt
 
         public Librarian(string firstName, string lastName, string email, string password) : base(firstName, lastName, email, password)
         {
-            numOfLibrarians++;
             ID = numOfLibrarians + 10;
+            numOfLibrarians++;
         }
 
         public uint ID { get; }

@@ -15,7 +15,11 @@ namespace Projekt
         public LogInView()
         {
             InitializeComponent();
-            
+/*            Reader user1 = new Reader("Ewa", "Nowak", "EA@wp.pl", "Nowak");
+            Librarian user2 = new Librarian("Adam", "Filipiak", "FilA@wp.pl", "Filipiak");
+
+            MessageBox.Show(user2.Password + " " + user2.ID);
+            MessageBox.Show(user1.Password + " " + user1.ID);*/
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

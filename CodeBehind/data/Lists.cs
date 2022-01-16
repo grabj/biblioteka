@@ -12,7 +12,7 @@ namespace Projekt.data
         {
             List<User> uList = new List<User>();
 
-            uList.Add(new Reader{ firstName = "Maria", lastName = "Kowalska", email = "MK@wp.pl", password = "kowalska" });
+            //uList.Add(new Reader{ firstName = "Maria", lastName = "Kowalska", email = "MK@wp.pl", password = "kowalska" });
 
             return uList;
         }

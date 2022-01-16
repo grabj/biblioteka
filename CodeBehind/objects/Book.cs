@@ -13,8 +13,9 @@ namespace Projekt
         private string _authorFirstName;
         private string _authorLastName;
         private int _yearOfRelease;
-        private Reader _loaner = null;
+        private uint _loanerID;
         private DateTime _dateOfLoaning;
+        private DateTime _dateOfReturning;
 
         public Book(uint iSBN, string title, string authorFirstName, string authorLastName, int yearOfRelease)
         {
@@ -23,6 +24,14 @@ namespace Projekt
             _authorFirstName = authorFirstName;
             _authorLastName = authorLastName;
             _yearOfRelease = yearOfRelease;
+        }
+
+        public void Loan(DateTime dateOfLoaning, Reader loaner)
+        {
+            loaner.BookCount++;
+            _dateOfLoaning = dateOfLoaning;
+            _dateOfReturning = dateOfLoaning.AddDays(30);
+            _loanerID = loaner.ID;
         }
 
         public uint ISBN
@@ -54,15 +63,20 @@ namespace Projekt
             get => _yearOfRelease;
             set => _yearOfRelease = value;
         }
-        public Reader Loaner
+        public uint LoanerID
         {
-            get => _loaner;
-            set => _loaner = value;
+            get => _loanerID;
+            set => _loanerID = value;
         }
         public DateTime DateOfLoaning
         {
             get => _dateOfLoaning;
             set => _dateOfLoaning = value;
+        }
+        public DateTime DateOfReturning
+        {
+            get => _dateOfReturning;
+            set => _dateOfReturning = value;
         }
     }
 }
