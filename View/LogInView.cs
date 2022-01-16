@@ -15,6 +15,7 @@ namespace Projekt
         public LogInView()
         {
             InitializeComponent();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -24,7 +25,6 @@ namespace Projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             MenuGuestView menuGuest = new MenuGuestView();
             this.Hide();
             menuGuest.Show();
@@ -32,7 +32,8 @@ namespace Projekt
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "admin" && textBox2.Text == "admin")
+            Admin admin = Admin.GetInstance;
+            if (textBox1.Text == admin.Login && textBox2.Text == admin.Password)
             {
                 MessageBox.Show("");
             }

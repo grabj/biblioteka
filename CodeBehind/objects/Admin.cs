@@ -6,18 +6,29 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class Admin : User
+    class Admin
     {
-        public Admin(uint id = 1, string lastName = "admin", string firstName = null, string email = null, string password = "admin") : base(lastName, firstName, email, password)
+        private static Admin instance;
+
+        private Admin(string login = "admin", string password = "admin")
         {
-            ID = id;
-            Login = lastName + ID;
             Password = password;
+            Login = login;
         }
 
-        public uint ID { get; }
+        public static Admin GetInstance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Admin();
+                }
+                return instance;
+            }
+        }
+
         public string Login { get; }
         public string Password { get; }
-
     }
 }
