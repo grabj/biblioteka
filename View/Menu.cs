@@ -66,5 +66,15 @@ namespace Projekt
             View.ConfirmForm confirmForm = new View.ConfirmForm();
             confirmForm.Show();
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

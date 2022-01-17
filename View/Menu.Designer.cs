@@ -31,7 +31,6 @@ namespace Projekt
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,31 +39,38 @@ namespace Projekt
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBooks = new System.Windows.Forms.TabPage();
             this.tabUsers = new System.Windows.Forms.TabPage();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.readerListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.readerListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.titleCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iSBNCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAvailableCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfReturningCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabBooks.SuspendLayout();
             this.tabUsers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.readerListBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.readerListBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(19, 260);
+            this.button1.Location = new System.Drawing.Point(431, 326);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 58);
             this.button1.TabIndex = 0;
@@ -80,7 +86,7 @@ namespace Projekt
             this.statusToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(616, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(587, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,26 +104,26 @@ namespace Projekt
             // signupToolStripMenuItem
             // 
             this.signupToolStripMenuItem.Name = "signupToolStripMenuItem";
-            this.signupToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.signupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.signupToolStripMenuItem.Text = "Utwórz konto";
             this.signupToolStripMenuItem.Click += new System.EventHandler(this.signupToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Wyloguj";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Wyjdź";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -128,17 +134,9 @@ namespace Projekt
             this.statusToolStripMenuItem.Text = "Stan konta";
             this.statusToolStripMenuItem.Click += new System.EventHandler(this.statusToolStripMenuItem_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(19, 17);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(262, 238);
-            this.listBox1.TabIndex = 2;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(19, 324);
+            this.button2.Location = new System.Drawing.Point(308, 326);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 58);
             this.button2.TabIndex = 3;
@@ -147,7 +145,7 @@ namespace Projekt
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(165, 261);
+            this.button3.Location = new System.Drawing.Point(6, 329);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 23);
             this.button3.TabIndex = 4;
@@ -156,22 +154,12 @@ namespace Projekt
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(165, 295);
+            this.button4.Location = new System.Drawing.Point(6, 358);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 23);
             this.button4.TabIndex = 5;
             this.button4.Text = "Edytuj pozycję";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(165, 355);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(116, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Usuń pozycję";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // tabControl1
             // 
@@ -184,13 +172,12 @@ namespace Projekt
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(15, 6);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(308, 422);
+            this.tabControl1.Size = new System.Drawing.Size(563, 422);
             this.tabControl1.TabIndex = 7;
             // 
             // tabBooks
             // 
-            this.tabBooks.Controls.Add(this.listBox1);
-            this.tabBooks.Controls.Add(this.button5);
+            this.tabBooks.Controls.Add(this.dataGridView1);
             this.tabBooks.Controls.Add(this.button1);
             this.tabBooks.Controls.Add(this.button4);
             this.tabBooks.Controls.Add(this.button2);
@@ -198,7 +185,7 @@ namespace Projekt
             this.tabBooks.Location = new System.Drawing.Point(4, 31);
             this.tabBooks.Name = "tabBooks";
             this.tabBooks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBooks.Size = new System.Drawing.Size(300, 387);
+            this.tabBooks.Size = new System.Drawing.Size(555, 387);
             this.tabBooks.TabIndex = 0;
             this.tabBooks.Text = "          Katalog          ";
             this.tabBooks.UseVisualStyleBackColor = true;
@@ -206,29 +193,21 @@ namespace Projekt
             // 
             // tabUsers
             // 
-            this.tabUsers.Controls.Add(this.listBox2);
+            this.tabUsers.Controls.Add(this.dataGridView2);
             this.tabUsers.Controls.Add(this.button6);
             this.tabUsers.Controls.Add(this.button8);
             this.tabUsers.Controls.Add(this.button10);
             this.tabUsers.Location = new System.Drawing.Point(4, 31);
             this.tabUsers.Name = "tabUsers";
             this.tabUsers.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUsers.Size = new System.Drawing.Size(300, 387);
+            this.tabUsers.Size = new System.Drawing.Size(555, 387);
             this.tabUsers.TabIndex = 1;
             this.tabUsers.Text = "Użytkownicy";
             this.tabUsers.UseVisualStyleBackColor = true;
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(19, 17);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(262, 238);
-            this.listBox2.TabIndex = 8;
-            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(89, 355);
+            this.button6.Location = new System.Drawing.Point(433, 358);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(116, 23);
             this.button6.TabIndex = 12;
@@ -238,7 +217,7 @@ namespace Projekt
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(67, 295);
+            this.button8.Location = new System.Drawing.Point(174, 358);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(162, 23);
             this.button8.TabIndex = 11;
@@ -247,7 +226,7 @@ namespace Projekt
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(67, 266);
+            this.button10.Location = new System.Drawing.Point(6, 358);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(162, 23);
             this.button10.TabIndex = 10;
@@ -255,19 +234,91 @@ namespace Projekt
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // readerListBindingSource
+            // dataGridView1
             // 
-            this.readerListBindingSource.DataSource = typeof(Projekt.ReaderList);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.titleCol,
+            this.authorCol,
+            this.iSBNCol,
+            this.isAvailableCol,
+            this.dateOfReturningCol});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(543, 314);
+            this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // readerListBindingSource1
+            // dataGridView2
             // 
-            this.readerListBindingSource1.DataSource = typeof(Projekt.ReaderList);
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCol,
+            this.loginCol,
+            this.lastNameCol,
+            this.firstNameCol,
+            this.emailCol});
+            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(543, 338);
+            this.dataGridView2.TabIndex = 13;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // titleCol
+            // 
+            this.titleCol.HeaderText = "Tytuł";
+            this.titleCol.Name = "titleCol";
+            // 
+            // authorCol
+            // 
+            this.authorCol.HeaderText = "Autor";
+            this.authorCol.Name = "authorCol";
+            // 
+            // iSBNCol
+            // 
+            this.iSBNCol.HeaderText = "ISBN";
+            this.iSBNCol.Name = "iSBNCol";
+            // 
+            // isAvailableCol
+            // 
+            this.isAvailableCol.HeaderText = "Dostępna";
+            this.isAvailableCol.Name = "isAvailableCol";
+            // 
+            // dateOfReturningCol
+            // 
+            this.dateOfReturningCol.HeaderText = "Data zwrotu";
+            this.dateOfReturningCol.Name = "dateOfReturningCol";
+            // 
+            // iDCol
+            // 
+            this.iDCol.HeaderText = "Nr ID";
+            this.iDCol.Name = "iDCol";
+            // 
+            // loginCol
+            // 
+            this.loginCol.HeaderText = "Login";
+            this.loginCol.Name = "loginCol";
+            // 
+            // lastNameCol
+            // 
+            this.lastNameCol.HeaderText = "Nazwisko";
+            this.lastNameCol.Name = "lastNameCol";
+            // 
+            // firstNameCol
+            // 
+            this.firstNameCol.HeaderText = "Imię";
+            this.firstNameCol.Name = "firstNameCol";
+            // 
+            // emailCol
+            // 
+            this.emailCol.HeaderText = "E-mail";
+            this.emailCol.Name = "emailCol";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 463);
+            this.ClientSize = new System.Drawing.Size(587, 463);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -280,8 +331,8 @@ namespace Projekt
             this.tabControl1.ResumeLayout(false);
             this.tabBooks.ResumeLayout(false);
             this.tabUsers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.readerListBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.readerListBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,23 +344,30 @@ namespace Projekt
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statusToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBox1;
         public Button button1;
         public Button button2;
         public Button button3;
         public Button button4;
-        public Button button5;
         public TabControl tabControl1;
         private TabPage tabBooks;
         private TabPage tabUsers;
         public ToolStripMenuItem signupToolStripMenuItem;
         public ToolStripSeparator toolStripSeparator1;
-        private ListBox listBox2;
         public Button button6;
         public Button button8;
         public Button button10;
-        private BindingSource readerListBindingSource;
-        private BindingSource readerListBindingSource1;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn titleCol;
+        private DataGridViewTextBoxColumn authorCol;
+        private DataGridViewTextBoxColumn iSBNCol;
+        private DataGridViewTextBoxColumn isAvailableCol;
+        private DataGridViewTextBoxColumn dateOfReturningCol;
+        private DataGridViewTextBoxColumn iDCol;
+        private DataGridViewTextBoxColumn loginCol;
+        private DataGridViewTextBoxColumn lastNameCol;
+        private DataGridViewTextBoxColumn firstNameCol;
+        private DataGridViewTextBoxColumn emailCol;
     }
 }
 
