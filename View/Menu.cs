@@ -45,13 +45,26 @@ namespace Projekt
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            View.SignupForm signupForm = new View.SignupForm();
+            signupForm.Show();
         }
 
         private void signupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             View.SignupForm signupForm = new View.SignupForm();
             signupForm.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            View.ConfirmForm confirmForm = new View.ConfirmForm();
+            confirmForm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            View.ConfirmForm confirmForm = new View.ConfirmForm();
+            confirmForm.Show();
         }
     }
 }

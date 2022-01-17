@@ -97,7 +97,7 @@ namespace Projekt.View
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 13);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Wprowadź swoje dane:";
+            this.label1.Text = "Wprowadź dane:";
             // 
             // label4
             // 

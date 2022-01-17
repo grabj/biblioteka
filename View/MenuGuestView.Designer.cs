@@ -30,6 +30,7 @@ namespace Projekt
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.signupToolStripMenuItem.Text = "Zarejestruj się";
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Visible = false;

@@ -15,11 +15,11 @@ namespace Projekt
         public LogInView()
         {
             InitializeComponent();
-/*            Reader user1 = new Reader("Ewa", "Nowak", "EA@wp.pl", "Nowak");
-            Librarian user2 = new Librarian("Adam", "Filipiak", "FilA@wp.pl", "Filipiak");
-
-            MessageBox.Show(user2.Password + " " + user2.ID);
-            MessageBox.Show(user1.Password + " " + user1.ID);*/
+            Reader user1 = new Reader("Ewa", "Nowak", "EA@wp.pl", "Nowak", "en");
+            ReaderList.AddReader(user1);
+            //Librarian user2 = new Librarian("Adam", "Filipiak", "FilA@wp.pl", "Filipiak", "af");
+            //MessageBox.Show("");
+            //MessageBox.Show(user1.Password + " " + user1.Login);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -39,12 +39,15 @@ namespace Projekt
             Admin admin = Admin.GetInstance;
             if (textBox1.Text == admin.Login && textBox2.Text == admin.Password)
             {
-                MessageBox.Show("");
+                Menu menuUser = new Menu();
+                this.Hide();
+                menuUser.Show();
             }
+            //if (textBox1.Text == )
             
-            Menu menuUser = new Menu();
+            Menu menuUser2 = new Menu();
             this.Hide();
-            menuUser.Show();
+            menuUser2.Show();
         }
     }
 }

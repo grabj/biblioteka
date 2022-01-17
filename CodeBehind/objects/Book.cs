@@ -8,6 +8,7 @@ namespace Projekt
 {
     class Book
     {
+        private static uint numOfBooks;
         private uint _iSBN;
         private string _title;
         private string _authorFirstName;
@@ -16,6 +17,7 @@ namespace Projekt
         private uint _loanerID;
         private DateTime _dateOfLoaning;
         private DateTime _dateOfReturning;
+        private bool _isAvailable = true;
 
         public Book(uint iSBN, string title, string authorFirstName, string authorLastName, int yearOfRelease)
         {
@@ -24,6 +26,8 @@ namespace Projekt
             _authorFirstName = authorFirstName;
             _authorLastName = authorLastName;
             _yearOfRelease = yearOfRelease;
+            numOfBooks++;
+            BookID = numOfBooks;
         }
 
         public void Loan(DateTime dateOfLoaning, Reader loaner)
@@ -34,6 +38,7 @@ namespace Projekt
             _loanerID = loaner.ID;
         }
 
+        public uint BookID { get; }
         public uint ISBN
         { 
             get => _iSBN;
@@ -77,6 +82,11 @@ namespace Projekt
         {
             get => _dateOfReturning;
             set => _dateOfReturning = value;
+        }
+        public bool IsAvailable
+        {
+            get => _isAvailable;
+            set => _isAvailable = value;
         }
     }
 }

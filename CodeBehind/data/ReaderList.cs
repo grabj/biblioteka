@@ -18,10 +18,16 @@ namespace Projekt
             }
             else
             {
-                List<Reader> Readers = new List<Reader>();
+                //List<Reader> Readers = new List<Reader>();
                 Readers.Add(reader);
             }
         }
+
+        /*public List<Reader> GetReaders()
+        {
+            Readers.ToList().ForEach(i => Readers.Add(i));
+            return Readers;
+        }*/
 
         public static List<Reader> LoadSampleData()
         {

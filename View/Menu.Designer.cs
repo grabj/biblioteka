@@ -31,6 +31,7 @@ namespace Projekt
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,10 +52,14 @@ namespace Projekt
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.readerListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.readerListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabBooks.SuspendLayout();
             this.tabUsers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.readerListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.readerListBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -93,28 +98,26 @@ namespace Projekt
             // signupToolStripMenuItem
             // 
             this.signupToolStripMenuItem.Name = "signupToolStripMenuItem";
-            this.signupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.signupToolStripMenuItem.Text = "Zarejestruj się";
-            this.signupToolStripMenuItem.Visible = false;
+            this.signupToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.signupToolStripMenuItem.Text = "Utwórz konto";
             this.signupToolStripMenuItem.Click += new System.EventHandler(this.signupToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            this.toolStripSeparator1.Visible = false;
+            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.logoutToolStripMenuItem.Text = "Wyloguj";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.exitToolStripMenuItem.Text = "Wyjdź";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -168,6 +171,7 @@ namespace Projekt
             this.button5.TabIndex = 6;
             this.button5.Text = "Usuń pozycję";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // tabControl1
             // 
@@ -230,6 +234,7 @@ namespace Projekt
             this.button6.TabIndex = 12;
             this.button6.Text = "Usuń użytkownika";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button8
             // 
@@ -250,6 +255,14 @@ namespace Projekt
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // readerListBindingSource
+            // 
+            this.readerListBindingSource.DataSource = typeof(Projekt.ReaderList);
+            // 
+            // readerListBindingSource1
+            // 
+            this.readerListBindingSource1.DataSource = typeof(Projekt.ReaderList);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +280,8 @@ namespace Projekt
             this.tabControl1.ResumeLayout(false);
             this.tabBooks.ResumeLayout(false);
             this.tabUsers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.readerListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.readerListBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +308,8 @@ namespace Projekt
         public Button button6;
         public Button button8;
         public Button button10;
+        private BindingSource readerListBindingSource;
+        private BindingSource readerListBindingSource1;
     }
 }
 
