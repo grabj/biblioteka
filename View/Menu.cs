@@ -37,5 +37,15 @@ namespace Projekt
         {
             MessageBox.Show("\n ", "Stan konta");
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
