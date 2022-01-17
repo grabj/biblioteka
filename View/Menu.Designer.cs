@@ -31,6 +31,7 @@ namespace Projekt
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,22 +51,32 @@ namespace Projekt
             this.button10 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.titleCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authorCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iSBNCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isAvailableCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfReturningCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorFirstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorLastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loanerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfLoaningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAvailableDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dateOfReturningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabBooks.SuspendLayout();
             this.tabUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -104,26 +115,26 @@ namespace Projekt
             // signupToolStripMenuItem
             // 
             this.signupToolStripMenuItem.Name = "signupToolStripMenuItem";
-            this.signupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.signupToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.signupToolStripMenuItem.Text = "Utwórz konto";
             this.signupToolStripMenuItem.Click += new System.EventHandler(this.signupToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.logoutToolStripMenuItem.Text = "Wyloguj";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.exitToolStripMenuItem.Text = "Wyjdź";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -236,13 +247,21 @@ namespace Projekt
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.titleCol,
-            this.authorCol,
-            this.iSBNCol,
-            this.isAvailableCol,
-            this.dateOfReturningCol});
+            this.bookIDDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.authorDataGridViewTextBoxColumn,
+            this.iSBNDataGridViewTextBoxColumn,
+            this.authorFirstNameDataGridViewTextBoxColumn,
+            this.authorLastNameDataGridViewTextBoxColumn,
+            this.loanerIDDataGridViewTextBoxColumn,
+            this.dateOfLoaningDataGridViewTextBoxColumn,
+            this.isAvailableDataGridViewCheckBoxColumn,
+            this.dateOfReturningDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bookBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(543, 314);
@@ -251,68 +270,133 @@ namespace Projekt
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDCol,
-            this.loginCol,
-            this.lastNameCol,
-            this.firstNameCol,
-            this.emailCol});
+            this.loginDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.userBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(6, 6);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(543, 338);
             this.dataGridView2.TabIndex = 13;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // titleCol
-            // 
-            this.titleCol.HeaderText = "Tytuł";
-            this.titleCol.Name = "titleCol";
-            // 
-            // authorCol
-            // 
-            this.authorCol.HeaderText = "Autor";
-            this.authorCol.Name = "authorCol";
-            // 
-            // iSBNCol
-            // 
-            this.iSBNCol.HeaderText = "ISBN";
-            this.iSBNCol.Name = "iSBNCol";
-            // 
-            // isAvailableCol
-            // 
-            this.isAvailableCol.HeaderText = "Dostępna";
-            this.isAvailableCol.Name = "isAvailableCol";
-            // 
-            // dateOfReturningCol
-            // 
-            this.dateOfReturningCol.HeaderText = "Data zwrotu";
-            this.dateOfReturningCol.Name = "dateOfReturningCol";
-            // 
             // iDCol
             // 
-            this.iDCol.HeaderText = "Nr ID";
+            this.iDCol.HeaderText = "ID";
             this.iDCol.Name = "iDCol";
             // 
-            // loginCol
+            // loginDataGridViewTextBoxColumn
             // 
-            this.loginCol.HeaderText = "Login";
-            this.loginCol.Name = "loginCol";
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
             // 
-            // lastNameCol
+            // lastNameDataGridViewTextBoxColumn
             // 
-            this.lastNameCol.HeaderText = "Nazwisko";
-            this.lastNameCol.Name = "lastNameCol";
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
             // 
-            // firstNameCol
+            // firstNameDataGridViewTextBoxColumn
             // 
-            this.firstNameCol.HeaderText = "Imię";
-            this.firstNameCol.Name = "firstNameCol";
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Imię";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
             // 
-            // emailCol
+            // emailDataGridViewTextBoxColumn
             // 
-            this.emailCol.HeaderText = "E-mail";
-            this.emailCol.Name = "emailCol";
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Projekt.User);
+            this.userBindingSource.CurrentChanged += new System.EventHandler(this.userBindingSource_CurrentChanged);
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(Projekt.Book);
+            // 
+            // bookIDDataGridViewTextBoxColumn
+            // 
+            this.bookIDDataGridViewTextBoxColumn.DataPropertyName = "BookID";
+            this.bookIDDataGridViewTextBoxColumn.HeaderText = "BookID";
+            this.bookIDDataGridViewTextBoxColumn.Name = "bookIDDataGridViewTextBoxColumn";
+            this.bookIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Tytuł";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            // 
+            // authorDataGridViewTextBoxColumn
+            // 
+            this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
+            this.authorDataGridViewTextBoxColumn.HeaderText = "Autor";
+            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            this.authorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iSBNDataGridViewTextBoxColumn
+            // 
+            this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
+            // 
+            // authorFirstNameDataGridViewTextBoxColumn
+            // 
+            this.authorFirstNameDataGridViewTextBoxColumn.DataPropertyName = "AuthorFirstName";
+            this.authorFirstNameDataGridViewTextBoxColumn.HeaderText = "AuthorFirstName";
+            this.authorFirstNameDataGridViewTextBoxColumn.Name = "authorFirstNameDataGridViewTextBoxColumn";
+            this.authorFirstNameDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // authorLastNameDataGridViewTextBoxColumn
+            // 
+            this.authorLastNameDataGridViewTextBoxColumn.DataPropertyName = "AuthorLastName";
+            this.authorLastNameDataGridViewTextBoxColumn.HeaderText = "AuthorLastName";
+            this.authorLastNameDataGridViewTextBoxColumn.Name = "authorLastNameDataGridViewTextBoxColumn";
+            this.authorLastNameDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // loanerIDDataGridViewTextBoxColumn
+            // 
+            this.loanerIDDataGridViewTextBoxColumn.DataPropertyName = "LoanerID";
+            this.loanerIDDataGridViewTextBoxColumn.HeaderText = "LoanerID";
+            this.loanerIDDataGridViewTextBoxColumn.Name = "loanerIDDataGridViewTextBoxColumn";
+            this.loanerIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dateOfLoaningDataGridViewTextBoxColumn
+            // 
+            this.dateOfLoaningDataGridViewTextBoxColumn.DataPropertyName = "DateOfLoaning";
+            this.dateOfLoaningDataGridViewTextBoxColumn.HeaderText = "DateOfLoaning";
+            this.dateOfLoaningDataGridViewTextBoxColumn.Name = "dateOfLoaningDataGridViewTextBoxColumn";
+            this.dateOfLoaningDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // isAvailableDataGridViewCheckBoxColumn
+            // 
+            this.isAvailableDataGridViewCheckBoxColumn.DataPropertyName = "IsAvailable";
+            this.isAvailableDataGridViewCheckBoxColumn.HeaderText = "Na półce";
+            this.isAvailableDataGridViewCheckBoxColumn.Name = "isAvailableDataGridViewCheckBoxColumn";
+            // 
+            // dateOfReturningDataGridViewTextBoxColumn
+            // 
+            this.dateOfReturningDataGridViewTextBoxColumn.DataPropertyName = "DateOfReturning";
+            this.dateOfReturningDataGridViewTextBoxColumn.HeaderText = "Data zwrotu";
+            this.dateOfReturningDataGridViewTextBoxColumn.Name = "dateOfReturningDataGridViewTextBoxColumn";
             // 
             // Menu
             // 
@@ -333,6 +417,8 @@ namespace Projekt
             this.tabUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,18 +442,26 @@ namespace Projekt
         public Button button6;
         public Button button8;
         public Button button10;
-        private DataGridView dataGridView1;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn titleCol;
-        private DataGridViewTextBoxColumn authorCol;
-        private DataGridViewTextBoxColumn iSBNCol;
-        private DataGridViewTextBoxColumn isAvailableCol;
-        private DataGridViewTextBoxColumn dateOfReturningCol;
+        private BindingSource userBindingSource;
         private DataGridViewTextBoxColumn iDCol;
-        private DataGridViewTextBoxColumn loginCol;
-        private DataGridViewTextBoxColumn lastNameCol;
-        private DataGridViewTextBoxColumn firstNameCol;
-        private DataGridViewTextBoxColumn emailCol;
+        private DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bookIDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn iSBNDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn authorFirstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn authorLastNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn loanerIDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateOfLoaningDataGridViewTextBoxColumn;
+        private DataGridViewCheckBoxColumn isAvailableDataGridViewCheckBoxColumn;
+        private DataGridViewTextBoxColumn dateOfReturningDataGridViewTextBoxColumn;
+        private BindingSource bookBindingSource;
+        public DataGridView dataGridView1;
     }
 }
 

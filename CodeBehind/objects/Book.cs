@@ -13,19 +13,17 @@ namespace Projekt
         private string _title;
         private string _authorFirstName;
         private string _authorLastName;
-        private int _yearOfRelease;
         private uint _loanerID;
         private DateTime _dateOfLoaning;
         private DateTime _dateOfReturning;
         private bool _isAvailable = true;
 
-        public Book(uint iSBN, string title, string authorFirstName, string authorLastName, int yearOfRelease)
+        public Book(uint iSBN, string title, string authorFirstName, string authorLastName)
         {
             _iSBN = iSBN;
             _title = title;
             _authorFirstName = authorFirstName;
             _authorLastName = authorLastName;
-            _yearOfRelease = yearOfRelease;
             numOfBooks++;
             BookID = numOfBooks;
         }
@@ -62,11 +60,6 @@ namespace Projekt
         {
             get => _authorLastName;
             set => _authorLastName = value;
-        }
-        public int YearOfRelease
-        {
-            get => _yearOfRelease;
-            set => _yearOfRelease = value;
         }
         public uint LoanerID
         {
