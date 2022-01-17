@@ -12,15 +12,22 @@ namespace Projekt
         private string _lastName;
         private string _email;
         private string _password;
+        private string _login;
 
-        public User(string firstName, string lastName, string email, string password)
+        public User(string firstName, string lastName, string email, string password, string login)
         {
             _firstName = firstName;
             _lastName = lastName;
             _email = email;
             _password = password;
+            _login = login;
         }
 
+        public string Login
+        {
+            get => _login;
+            set => _login = value;
+        }
         public string FirstName
         {
             get => _firstName;

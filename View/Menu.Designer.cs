@@ -96,6 +96,7 @@ namespace Projekt
             this.signupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.signupToolStripMenuItem.Text = "Zarejestruj się";
             this.signupToolStripMenuItem.Visible = false;
+            this.signupToolStripMenuItem.Click += new System.EventHandler(this.signupToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 

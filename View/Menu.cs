@@ -47,5 +47,11 @@ namespace Projekt
         {
 
         }
+
+        private void signupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View.SignupForm signupForm = new View.SignupForm();
+            signupForm.Show();
+        }
     }
 }

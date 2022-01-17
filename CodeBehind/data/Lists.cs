@@ -4,17 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projekt.data
+namespace Projekt
 {
-    class UserList
+    class ReaderList
     {
-        public static List<User> LoadSampleData()
+        public static List<Reader> Readers = new List<Reader>();
+
+        public static void AddReader(Reader reader)
         {
-            List<User> uList = new List<User>();
+            if (Readers.Count > 0)
+            {
+                Readers.Add(reader);
+            }
+            else
+            {
+                List<Reader> Readers = new List<Reader>();
+                Readers.Add(reader);
+            }
+        }
 
-            //uList.Add(item: new Librarian { firstName = "Maria", lastName = "Kowalska", email = "MK@wp.pl", password = "kowalska" });
+        public static List<Reader> LoadSampleData()
+        {
+            List<Reader> rList = new List<Reader>();
 
-            return uList;
+            //rList.Add(item: new Reader { firstName = "Maria", lastName = "Kowalska", email = "MK@wp.pl", password = "kowalska", Login = "mk"});
+
+            return rList;
         }
     }
 }
