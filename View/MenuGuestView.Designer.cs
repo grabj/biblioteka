@@ -35,7 +35,6 @@ namespace Projekt
             button2.Enabled = false;
             button3.Visible = false;
             button4.Visible = false;
-            tabControl1.Enabled = false;
             signupToolStripMenuItem.Visible = true;
             toolStripSeparator1.Visible = true;
         }
