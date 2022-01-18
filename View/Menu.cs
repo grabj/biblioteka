@@ -101,5 +101,19 @@ namespace Projekt
             dataGridView2.Refresh();
             dataGridView3.Refresh();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        { 
+            
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = null;
+            dataGridView2.Rows.Clear();
+            dataGridView2.DataSource = ReaderList.Readers;
+            dataGridView2.Update();
+            dataGridView2.Refresh();
+        }
     }
 }
