@@ -75,6 +75,12 @@
     <Compile Include="View\AddBookForm.Designer.cs">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ConfirmDeleteLibrarian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConfirmDeleteLibrarian.Designer.cs">
+      <DependentUpon>ConfirmDeleteLibrarian.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="View\AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConfirmDeleteLibrarian.resx">
+      <DependentUpon>ConfirmDeleteLibrarian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ConfirmForm.resx">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
