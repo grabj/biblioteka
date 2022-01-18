@@ -52,14 +52,14 @@ namespace Projekt
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.iDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabLibrarians = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,14 +69,33 @@ namespace Projekt
             this.dateOfLoaningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAvailableDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateOfReturningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.readerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.librarianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabBooks.SuspendLayout();
             this.tabUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            this.tabLibrarians.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.readerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -94,7 +113,8 @@ namespace Projekt
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
-            this.statusToolStripMenuItem});
+            this.statusToolStripMenuItem,
+            this.refreshToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(587, 24);
@@ -115,26 +135,26 @@ namespace Projekt
             // signupToolStripMenuItem
             // 
             this.signupToolStripMenuItem.Name = "signupToolStripMenuItem";
-            this.signupToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.signupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.signupToolStripMenuItem.Text = "Utwórz konto";
             this.signupToolStripMenuItem.Click += new System.EventHandler(this.signupToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Wyloguj";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Wyjdź";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -177,6 +197,7 @@ namespace Projekt
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl1.Controls.Add(this.tabBooks);
             this.tabControl1.Controls.Add(this.tabUsers);
+            this.tabControl1.Controls.Add(this.tabLibrarians);
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(12, 36);
             this.tabControl1.Multiline = true;
@@ -213,7 +234,7 @@ namespace Projekt
             this.tabUsers.Padding = new System.Windows.Forms.Padding(3);
             this.tabUsers.Size = new System.Drawing.Size(555, 387);
             this.tabUsers.TabIndex = 1;
-            this.tabUsers.Text = "Użytkownicy";
+            this.tabUsers.Text = "Czytelnicy";
             this.tabUsers.UseVisualStyleBackColor = true;
             // 
             // button6
@@ -247,11 +268,13 @@ namespace Projekt
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookIDDataGridViewTextBoxColumn,
+            this.BookID,
             this.titleDataGridViewTextBoxColumn,
             this.authorDataGridViewTextBoxColumn,
             this.iSBNDataGridViewTextBoxColumn,
@@ -263,14 +286,21 @@ namespace Projekt
             this.dateOfReturningDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bookBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(543, 314);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDCol,
@@ -278,72 +308,123 @@ namespace Projekt
             this.lastNameDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
+            this.BookCount,
             this.passwordDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.userBindingSource;
+            this.dataGridView2.DataSource = this.readerBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(543, 338);
             this.dataGridView2.TabIndex = 13;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // iDCol
             // 
+            this.iDCol.DataPropertyName = "ID";
             this.iDCol.HeaderText = "ID";
             this.iDCol.Name = "iDCol";
+            this.iDCol.ReadOnly = true;
+            this.iDCol.Width = 50;
             // 
-            // loginDataGridViewTextBoxColumn
+            // BookCount
             // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.BookCount.DataPropertyName = "BookCount";
+            this.BookCount.HeaderText = "Ilość książek";
+            this.BookCount.Name = "BookCount";
+            this.BookCount.ReadOnly = true;
+            this.BookCount.Width = 92;
             // 
-            // lastNameDataGridViewTextBoxColumn
+            // tabLibrarians
             // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.tabLibrarians.Controls.Add(this.dataGridView3);
+            this.tabLibrarians.Controls.Add(this.button5);
+            this.tabLibrarians.Controls.Add(this.button7);
+            this.tabLibrarians.Controls.Add(this.button9);
+            this.tabLibrarians.Location = new System.Drawing.Point(4, 31);
+            this.tabLibrarians.Name = "tabLibrarians";
+            this.tabLibrarians.Size = new System.Drawing.Size(555, 387);
+            this.tabLibrarians.TabIndex = 2;
+            this.tabLibrarians.Text = "Pracownicy";
+            this.tabLibrarians.UseVisualStyleBackColor = true;
             // 
-            // firstNameDataGridViewTextBoxColumn
+            // dataGridView3
             // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Imię";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7});
+            this.dataGridView3.DataSource = this.librarianBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView3.MultiSelect = false;
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(543, 338);
+            this.dataGridView3.TabIndex = 17;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // emailDataGridViewTextBoxColumn
+            // button5
             // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.button5.Location = new System.Drawing.Point(433, 358);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(116, 23);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Usuń użytkownika";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // passwordDataGridViewTextBoxColumn
+            // button7
             // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            this.button7.Location = new System.Drawing.Point(174, 358);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(162, 23);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Edytuj dane pracownika";
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // userBindingSource
+            // button9
             // 
-            this.userBindingSource.DataSource = typeof(Projekt.User);
-            this.userBindingSource.CurrentChanged += new System.EventHandler(this.userBindingSource_CurrentChanged);
+            this.button9.Location = new System.Drawing.Point(6, 358);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(162, 23);
+            this.button9.TabIndex = 14;
+            this.button9.Text = "Dodaj nowego pracownika";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // bookBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            this.bookBindingSource.DataSource = typeof(Projekt.Book);
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
-            // bookIDDataGridViewTextBoxColumn
+            // BookID
             // 
-            this.bookIDDataGridViewTextBoxColumn.DataPropertyName = "BookID";
-            this.bookIDDataGridViewTextBoxColumn.HeaderText = "BookID";
-            this.bookIDDataGridViewTextBoxColumn.Name = "bookIDDataGridViewTextBoxColumn";
-            this.bookIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookIDDataGridViewTextBoxColumn.Visible = false;
+            this.BookID.DataPropertyName = "BookID";
+            this.BookID.HeaderText = "ID";
+            this.BookID.Name = "BookID";
+            this.BookID.ReadOnly = true;
+            this.BookID.Width = 50;
             // 
             // titleDataGridViewTextBoxColumn
             // 
             this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
             this.titleDataGridViewTextBoxColumn.HeaderText = "Tytuł";
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // authorDataGridViewTextBoxColumn
             // 
@@ -357,12 +438,14 @@ namespace Projekt
             this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
             this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
             this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
+            this.iSBNDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // authorFirstNameDataGridViewTextBoxColumn
             // 
             this.authorFirstNameDataGridViewTextBoxColumn.DataPropertyName = "AuthorFirstName";
             this.authorFirstNameDataGridViewTextBoxColumn.HeaderText = "AuthorFirstName";
             this.authorFirstNameDataGridViewTextBoxColumn.Name = "authorFirstNameDataGridViewTextBoxColumn";
+            this.authorFirstNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.authorFirstNameDataGridViewTextBoxColumn.Visible = false;
             // 
             // authorLastNameDataGridViewTextBoxColumn
@@ -370,6 +453,7 @@ namespace Projekt
             this.authorLastNameDataGridViewTextBoxColumn.DataPropertyName = "AuthorLastName";
             this.authorLastNameDataGridViewTextBoxColumn.HeaderText = "AuthorLastName";
             this.authorLastNameDataGridViewTextBoxColumn.Name = "authorLastNameDataGridViewTextBoxColumn";
+            this.authorLastNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.authorLastNameDataGridViewTextBoxColumn.Visible = false;
             // 
             // loanerIDDataGridViewTextBoxColumn
@@ -377,6 +461,7 @@ namespace Projekt
             this.loanerIDDataGridViewTextBoxColumn.DataPropertyName = "LoanerID";
             this.loanerIDDataGridViewTextBoxColumn.HeaderText = "LoanerID";
             this.loanerIDDataGridViewTextBoxColumn.Name = "loanerIDDataGridViewTextBoxColumn";
+            this.loanerIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.loanerIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // dateOfLoaningDataGridViewTextBoxColumn
@@ -384,6 +469,7 @@ namespace Projekt
             this.dateOfLoaningDataGridViewTextBoxColumn.DataPropertyName = "DateOfLoaning";
             this.dateOfLoaningDataGridViewTextBoxColumn.HeaderText = "DateOfLoaning";
             this.dateOfLoaningDataGridViewTextBoxColumn.Name = "dateOfLoaningDataGridViewTextBoxColumn";
+            this.dateOfLoaningDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateOfLoaningDataGridViewTextBoxColumn.Visible = false;
             // 
             // isAvailableDataGridViewCheckBoxColumn
@@ -391,12 +477,120 @@ namespace Projekt
             this.isAvailableDataGridViewCheckBoxColumn.DataPropertyName = "IsAvailable";
             this.isAvailableDataGridViewCheckBoxColumn.HeaderText = "Na półce";
             this.isAvailableDataGridViewCheckBoxColumn.Name = "isAvailableDataGridViewCheckBoxColumn";
+            this.isAvailableDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isAvailableDataGridViewCheckBoxColumn.Width = 60;
             // 
             // dateOfReturningDataGridViewTextBoxColumn
             // 
             this.dateOfReturningDataGridViewTextBoxColumn.DataPropertyName = "DateOfReturning";
             this.dateOfReturningDataGridViewTextBoxColumn.HeaderText = "Data zwrotu";
             this.dateOfReturningDataGridViewTextBoxColumn.Name = "dateOfReturningDataGridViewTextBoxColumn";
+            this.dateOfReturningDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateOfReturningDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(Projekt.Book);
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
+            this.loginDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Imię";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.firstNameDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // readerBindingSource
+            // 
+            this.readerBindingSource.DataSource = typeof(Projekt.Reader);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Login";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Login";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nazwisko";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Imię";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn5.HeaderText = "E-mail";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // librarianBindingSource
+            // 
+            this.librarianBindingSource.DataSource = typeof(Projekt.Librarian);
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Projekt.User);
+            this.userBindingSource.CurrentChanged += new System.EventHandler(this.userBindingSource_CurrentChanged);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.refreshToolStripMenuItem.Text = "Odśwież";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -417,8 +611,12 @@ namespace Projekt
             this.tabUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            this.tabLibrarians.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.readerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,7 +632,6 @@ namespace Projekt
         public Button button2;
         public Button button3;
         public Button button4;
-        public TabControl tabControl1;
         private TabPage tabBooks;
         private TabPage tabUsers;
         public ToolStripMenuItem signupToolStripMenuItem;
@@ -444,13 +641,30 @@ namespace Projekt
         public Button button10;
         private DataGridView dataGridView2;
         private BindingSource userBindingSource;
+        private BindingSource bookBindingSource;
+        public DataGridView dataGridView1;
+        private BindingSource librarianBindingSource;
         private DataGridViewTextBoxColumn iDCol;
         private DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn BookCount;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn bookIDDataGridViewTextBoxColumn;
+        private BindingSource readerBindingSource;
+        private TabPage tabLibrarians;
+        private DataGridView dataGridView3;
+        public Button button5;
+        public Button button7;
+        public Button button9;
+        public TabControl tabControl1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn BookID;
         private DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn iSBNDataGridViewTextBoxColumn;
@@ -460,8 +674,7 @@ namespace Projekt
         private DataGridViewTextBoxColumn dateOfLoaningDataGridViewTextBoxColumn;
         private DataGridViewCheckBoxColumn isAvailableDataGridViewCheckBoxColumn;
         private DataGridViewTextBoxColumn dateOfReturningDataGridViewTextBoxColumn;
-        private BindingSource bookBindingSource;
-        public DataGridView dataGridView1;
+        private ToolStripMenuItem refreshToolStripMenuItem;
     }
 }
 

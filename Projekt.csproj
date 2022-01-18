@@ -48,7 +48,7 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeBehind\data\ReaderList.cs" />
+    <Compile Include="CodeBehind\data\Lists.cs" />
     <Compile Include="CodeBehind\objects\Admin.cs" />
     <Compile Include="CodeBehind\objects\Book.cs" />
     <Compile Include="CodeBehind\objects\Librarian.cs" />
@@ -109,8 +109,11 @@
     </EmbeddedResource>
     <None Include="Properties\DataSources\Book.datasource" />
     <None Include="Properties\DataSources\Librarian.datasource" />
+    <None Include="Properties\DataSources\Reader.datasource" />
     <None Include="Properties\DataSources\ReaderList.datasource" />
-    <None Include="Properties\DataSources\User.datasource" />
+    <None Include="Properties\DataSources\User.datasource">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

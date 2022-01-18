@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class Reader : User
+    public class Reader : User
     {
         private static uint numOfReaders;
         private int _bookCount = 0;

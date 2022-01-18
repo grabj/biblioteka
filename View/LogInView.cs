@@ -17,9 +17,12 @@ namespace Projekt
             InitializeComponent();
             Reader user1 = new Reader("Ewa", "Nowak", "EA@wp.pl", "Nowak", "en");
             ReaderList.AddReader(user1);
-            //Librarian user2 = new Librarian("Adam", "Filipiak", "FilA@wp.pl", "Filipiak", "af");
-            //MessageBox.Show("");
-            //MessageBox.Show(user1.Password + " " + user1.Login);
+
+            Librarian user2 = new Librarian("Adam", "Filipiak", "FilA@wp.pl", "Filipiak", "af");
+            LibrarianList.AddLibrarian(user2);
+
+            Book book1 = new Book(34534535, "Obcy", "Albert", "Camus");
+            BookList.AddBook(book1);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -44,7 +47,6 @@ namespace Projekt
                 menuUser.Show();
             }
             //if (textBox1.Text == )
-            
             Menu menuUser2 = new Menu();
             this.Hide();
             menuUser2.Show();

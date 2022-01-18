@@ -15,10 +15,13 @@ namespace Projekt
         public Menu()
         {
             InitializeComponent();
+            dataGridView2.DataSource = ReaderList.Readers;
+            dataGridView3.DataSource = LibrarianList.Librarians;
+            dataGridView1.DataSource = BookList.Books;
         }
         public virtual void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("rodzic");
+            
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,7 +72,7 @@ namespace Projekt
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -79,7 +82,24 @@ namespace Projekt
 
         private void userBindingSource_CurrentChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
+            dataGridView2.Refresh();
+            dataGridView3.Refresh();
         }
     }
 }
