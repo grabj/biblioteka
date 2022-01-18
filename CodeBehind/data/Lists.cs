@@ -35,4 +35,13 @@ namespace Projekt
             Books.Add(book);
         }
     }
+    class LoanList
+    {
+        public static List<Loan> Loans = new List<Loan>();
+
+        public static void AddLoan(Loan loan)
+        {
+            Loans.Add(loan);
+        }
+    }
 }

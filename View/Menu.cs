@@ -21,7 +21,8 @@ namespace Projekt
         }
         public virtual void button1_Click(object sender, EventArgs e)
         {
-            
+            View.LoanForm loanForm = new View.LoanForm();
+            loanForm.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace Projekt
         private void signupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             View.SignupForm signupForm = new View.SignupForm();
-            signupForm.user_Type(1);
+            signupForm.user_Type(2);
             signupForm.Show();
         }
 

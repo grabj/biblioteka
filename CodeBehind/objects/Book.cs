@@ -14,7 +14,6 @@ namespace Projekt
         private string _authorFirstName;
         private string _authorLastName;
         private uint _loanerID;
-        private DateTime _dateOfLoaning;
         private DateTime _dateOfReturning;
         private bool _isAvailable = true;
 
@@ -28,11 +27,10 @@ namespace Projekt
             BookID = numOfBooks;
         }
 
-        public void Loan(DateTime dateOfLoaning, Reader loaner)
+        public void Loan(DateTime dateOfReturning, Reader loaner)
         {
             loaner.BookCount++;
-            _dateOfLoaning = dateOfLoaning;
-            _dateOfReturning = dateOfLoaning.AddDays(30);
+            _dateOfReturning = dateOfReturning;
             _loanerID = loaner.ID;
         }
 
@@ -65,11 +63,6 @@ namespace Projekt
         {
             get => _loanerID;
             set => _loanerID = value;
-        }
-        public DateTime DateOfLoaning
-        {
-            get => _dateOfLoaning;
-            set => _dateOfLoaning = value;
         }
         public DateTime DateOfReturning
         {

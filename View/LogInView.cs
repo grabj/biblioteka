@@ -62,6 +62,7 @@ namespace Projekt
                     {
                         menuReaderForm.Show();
                         this.Hide();
+                        ActiveReader = reader;
                         break;
                     }
                 }
@@ -86,5 +87,6 @@ namespace Projekt
                 valid = true;
             return valid;
         }
+        public static Reader ActiveReader = null;
     }
 }

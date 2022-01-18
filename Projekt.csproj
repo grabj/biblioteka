@@ -67,6 +67,7 @@
     <Compile Include="CodeBehind\objects\Admin.cs" />
     <Compile Include="CodeBehind\objects\Book.cs" />
     <Compile Include="CodeBehind\objects\Librarian.cs" />
+    <Compile Include="CodeBehind\objects\Loan.cs" />
     <Compile Include="CodeBehind\objects\Reader.cs" />
     <Compile Include="View\AddBookForm.cs">
       <SubType>Form</SubType>
@@ -85,6 +86,12 @@
     </Compile>
     <Compile Include="View\EditBookForm.Designer.cs">
       <DependentUpon>EditBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoanForm.Designer.cs">
+      <DependentUpon>LoanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MenuLibrarianForm.cs">
       <SubType>Form</SubType>
@@ -133,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditBookForm.resx">
       <DependentUpon>EditBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoanForm.resx">
+      <DependentUpon>LoanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
