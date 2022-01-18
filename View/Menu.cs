@@ -15,9 +15,9 @@ namespace Projekt
         public Menu()
         {
             InitializeComponent();
+            dataGridView1.DataSource = BookList.Books;
             dataGridView2.DataSource = ReaderList.Readers;
             dataGridView3.DataSource = LibrarianList.Librarians;
-            dataGridView1.DataSource = BookList.Books;
         }
         public virtual void button1_Click(object sender, EventArgs e)
         {
@@ -49,6 +49,7 @@ namespace Projekt
         private void button10_Click(object sender, EventArgs e)
         {
             View.SignupForm signupForm = new View.SignupForm();
+            signupForm.user_Type(2);
             signupForm.Show();
         }
 
@@ -87,7 +88,9 @@ namespace Projekt
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            View.SignupForm signupForm = new View.SignupForm();
+            signupForm.user_Type(1);
+            signupForm.Show();
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -114,6 +117,15 @@ namespace Projekt
             dataGridView2.DataSource = ReaderList.Readers;
             dataGridView2.Update();
             dataGridView2.Refresh();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            dataGridView3.DataSource = null;
+            dataGridView3.Rows.Clear();
+            dataGridView3.DataSource = ReaderList.Readers;
+            dataGridView3.Update();
+            dataGridView3.Refresh();
         }
     }
 }

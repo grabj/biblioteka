@@ -76,7 +76,7 @@ namespace Projekt.View
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 167);
+            this.textBox2.Location = new System.Drawing.Point(97, 167);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(174, 20);
             this.textBox2.TabIndex = 12;
@@ -95,7 +95,7 @@ namespace Projekt.View
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Wprowadź dane:";
             // 
@@ -126,7 +126,7 @@ namespace Projekt.View
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(96, 115);
+            this.textBox4.Location = new System.Drawing.Point(97, 115);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(174, 20);
             this.textBox4.TabIndex = 10;
@@ -173,8 +173,9 @@ namespace Projekt.View
             // 
             this.textBox6.Location = new System.Drawing.Point(97, 38);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(173, 20);
+            this.textBox6.Size = new System.Drawing.Size(174, 20);
             this.textBox6.TabIndex = 7;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // SignupForm
             // 
@@ -203,6 +204,7 @@ namespace Projekt.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rejestracja";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.SignupForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
