@@ -53,12 +53,6 @@
     <Compile Include="CodeBehind\objects\Book.cs" />
     <Compile Include="CodeBehind\objects\Librarian.cs" />
     <Compile Include="CodeBehind\objects\Reader.cs" />
-    <Compile Include="View\AddBookForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\AddBookForm.Designer.cs">
-      <DependentUpon>AddBookForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,27 +80,12 @@
     <Compile Include="View\MenuGuestView.Designer.cs">
       <DependentUpon>MenuGuestView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\MenuLibrarianView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\MenuLibrarianView.Designer.cs">
-      <DependentUpon>MenuLibrarianView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\MenuReaderView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\MenuReaderView.Designer.cs">
-      <DependentUpon>MenuReaderView.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\AddBookForm.resx">
-      <DependentUpon>AddBookForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\ConfirmForm.resx">
       <DependentUpon>ConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,15 +104,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\MenuGuestView.resx">
-      <DependentUpon>MenuGuestView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\MenuLibrarianView.resx">
-      <DependentUpon>MenuLibrarianView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\MenuReaderView.resx">
-      <DependentUpon>MenuReaderView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>

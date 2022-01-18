@@ -48,19 +48,6 @@ namespace Projekt
             this.tabBooks = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabUsers = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.iDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.tabLibrarians = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,29 +58,46 @@ namespace Projekt
             this.isAvailableDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateOfReturningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabUsers = new System.Windows.Forms.TabPage();
+            this.button11 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.iDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.readerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.tabLibrarians = new System.Windows.Forms.TabPage();
+            this.button12 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.librarianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabBooks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.tabUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.readerBindingSource)).BeginInit();
             this.tabLibrarians.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.readerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -187,7 +191,6 @@ namespace Projekt
             this.button3.TabIndex = 4;
             this.button3.Text = "Dodaj pozycję";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -200,6 +203,7 @@ namespace Projekt
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl1.Controls.Add(this.tabBooks);
             this.tabControl1.Controls.Add(this.tabUsers);
             this.tabControl1.Controls.Add(this.tabLibrarians);
@@ -219,14 +223,14 @@ namespace Projekt
             this.tabBooks.Controls.Add(this.button4);
             this.tabBooks.Controls.Add(this.button2);
             this.tabBooks.Controls.Add(this.button3);
-            this.tabBooks.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabBooks.Location = new System.Drawing.Point(4, 28);
+            this.tabBooks.Location = new System.Drawing.Point(4, 31);
             this.tabBooks.Name = "tabBooks";
             this.tabBooks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBooks.Size = new System.Drawing.Size(555, 390);
+            this.tabBooks.Size = new System.Drawing.Size(555, 387);
             this.tabBooks.TabIndex = 0;
             this.tabBooks.Text = "          Katalog          ";
             this.tabBooks.UseVisualStyleBackColor = true;
+            this.tabBooks.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // dataGridView1
             // 
@@ -255,6 +259,7 @@ namespace Projekt
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(543, 314);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BookID
             // 
@@ -263,167 +268,6 @@ namespace Projekt
             this.BookID.Name = "BookID";
             this.BookID.ReadOnly = true;
             this.BookID.Width = 50;
-            // 
-            // tabUsers
-            // 
-            this.tabUsers.Controls.Add(this.dataGridView2);
-            this.tabUsers.Controls.Add(this.button6);
-            this.tabUsers.Controls.Add(this.button8);
-            this.tabUsers.Controls.Add(this.button10);
-            this.tabUsers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabUsers.Location = new System.Drawing.Point(4, 28);
-            this.tabUsers.Name = "tabUsers";
-            this.tabUsers.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUsers.Size = new System.Drawing.Size(555, 390);
-            this.tabUsers.TabIndex = 1;
-            this.tabUsers.Text = "Czytelnicy";
-            this.tabUsers.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDCol,
-            this.loginDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.BookCount,
-            this.passwordDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.readerBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(543, 338);
-            this.dataGridView2.TabIndex = 13;
-            this.dataGridView2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEnter);
-            // 
-            // iDCol
-            // 
-            this.iDCol.DataPropertyName = "ID";
-            this.iDCol.HeaderText = "ID";
-            this.iDCol.Name = "iDCol";
-            this.iDCol.ReadOnly = true;
-            this.iDCol.Width = 50;
-            // 
-            // BookCount
-            // 
-            this.BookCount.DataPropertyName = "BookCount";
-            this.BookCount.HeaderText = "Ilość książek";
-            this.BookCount.Name = "BookCount";
-            this.BookCount.ReadOnly = true;
-            this.BookCount.Width = 92;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(433, 358);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(116, 23);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Usuń użytkownika";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(174, 358);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(162, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Edytuj dane użytkownika";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(6, 358);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(162, 23);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "Dodaj nowego użytkownika";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // tabLibrarians
-            // 
-            this.tabLibrarians.Controls.Add(this.dataGridView3);
-            this.tabLibrarians.Controls.Add(this.button5);
-            this.tabLibrarians.Controls.Add(this.button7);
-            this.tabLibrarians.Controls.Add(this.button9);
-            this.tabLibrarians.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabLibrarians.Location = new System.Drawing.Point(4, 28);
-            this.tabLibrarians.Name = "tabLibrarians";
-            this.tabLibrarians.Size = new System.Drawing.Size(555, 390);
-            this.tabLibrarians.TabIndex = 2;
-            this.tabLibrarians.Text = "Pracownicy";
-            this.tabLibrarians.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn7});
-            this.dataGridView3.DataSource = this.librarianBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView3.MultiSelect = false;
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(543, 338);
-            this.dataGridView3.TabIndex = 17;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(433, 358);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(116, 23);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Usuń użytkownika";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(174, 358);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(162, 23);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Edytuj dane pracownika";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(6, 358);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(162, 23);
-            this.button9.TabIndex = 14;
-            this.button9.Text = "Dodaj nowego pracownika";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // titleDataGridViewTextBoxColumn
             // 
@@ -498,6 +342,65 @@ namespace Projekt
             // 
             this.bookBindingSource.DataSource = typeof(Projekt.Book);
             // 
+            // tabUsers
+            // 
+            this.tabUsers.Controls.Add(this.button11);
+            this.tabUsers.Controls.Add(this.dataGridView2);
+            this.tabUsers.Controls.Add(this.button6);
+            this.tabUsers.Controls.Add(this.button8);
+            this.tabUsers.Controls.Add(this.button10);
+            this.tabUsers.Location = new System.Drawing.Point(4, 31);
+            this.tabUsers.Name = "tabUsers";
+            this.tabUsers.Padding = new System.Windows.Forms.Padding(3);
+            this.tabUsers.Size = new System.Drawing.Size(555, 387);
+            this.tabUsers.TabIndex = 1;
+            this.tabUsers.Text = "Czytelnicy";
+            this.tabUsers.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(342, 358);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(85, 23);
+            this.button11.TabIndex = 14;
+            this.button11.Text = "Odśwież";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCol,
+            this.loginDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.BookCount,
+            this.passwordDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.readerBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(543, 338);
+            this.dataGridView2.TabIndex = 13;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // iDCol
+            // 
+            this.iDCol.DataPropertyName = "ID";
+            this.iDCol.HeaderText = "ID";
+            this.iDCol.Name = "iDCol";
+            this.iDCol.ReadOnly = true;
+            this.iDCol.Width = 50;
+            // 
             // loginDataGridViewTextBoxColumn
             // 
             this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
@@ -530,6 +433,14 @@ namespace Projekt
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             this.emailDataGridViewTextBoxColumn.Width = 90;
             // 
+            // BookCount
+            // 
+            this.BookCount.DataPropertyName = "BookCount";
+            this.BookCount.HeaderText = "Ilość książek";
+            this.BookCount.Name = "BookCount";
+            this.BookCount.ReadOnly = true;
+            this.BookCount.Width = 92;
+            // 
             // passwordDataGridViewTextBoxColumn
             // 
             this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
@@ -541,6 +452,93 @@ namespace Projekt
             // readerBindingSource
             // 
             this.readerBindingSource.DataSource = typeof(Projekt.Reader);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(433, 358);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(116, 23);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "Usuń użytkownika";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(174, 358);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(162, 23);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "Edytuj dane czytelnika";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(6, 358);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(162, 23);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "Dodaj nowego czytelnika";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // tabLibrarians
+            // 
+            this.tabLibrarians.Controls.Add(this.button12);
+            this.tabLibrarians.Controls.Add(this.dataGridView3);
+            this.tabLibrarians.Controls.Add(this.button5);
+            this.tabLibrarians.Controls.Add(this.button7);
+            this.tabLibrarians.Controls.Add(this.button9);
+            this.tabLibrarians.Location = new System.Drawing.Point(4, 31);
+            this.tabLibrarians.Name = "tabLibrarians";
+            this.tabLibrarians.Size = new System.Drawing.Size(555, 387);
+            this.tabLibrarians.TabIndex = 2;
+            this.tabLibrarians.Text = "Pracownicy";
+            this.tabLibrarians.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(342, 358);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(85, 23);
+            this.button12.TabIndex = 18;
+            this.button12.Text = "Odśwież";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7});
+            this.dataGridView3.DataSource = this.librarianBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView3.MultiSelect = false;
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(543, 338);
+            this.dataGridView3.TabIndex = 17;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -586,11 +584,44 @@ namespace Projekt
             // 
             this.librarianBindingSource.DataSource = typeof(Projekt.Librarian);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(433, 358);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(116, 23);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Usuń użytkownika";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(174, 358);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(162, 23);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Edytuj dane pracownika";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(6, 358);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(162, 23);
+            this.button9.TabIndex = 14;
+            this.button9.Text = "Dodaj nowego pracownika";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Projekt.User);
+            this.userBindingSource.CurrentChanged += new System.EventHandler(this.userBindingSource_CurrentChanged);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 470);
+            this.ClientSize = new System.Drawing.Size(587, 463);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -603,13 +634,14 @@ namespace Projekt
             this.tabControl1.ResumeLayout(false);
             this.tabBooks.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.tabUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.readerBindingSource)).EndInit();
             this.tabLibrarians.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.readerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,12 +658,14 @@ namespace Projekt
         public Button button3;
         public Button button4;
         private TabPage tabBooks;
+        private TabPage tabUsers;
         public ToolStripMenuItem signupToolStripMenuItem;
         public ToolStripSeparator toolStripSeparator1;
         public Button button6;
         public Button button8;
         public Button button10;
         private DataGridView dataGridView2;
+        private BindingSource userBindingSource;
         private BindingSource bookBindingSource;
         public DataGridView dataGridView1;
         private BindingSource librarianBindingSource;
@@ -643,10 +677,11 @@ namespace Projekt
         private DataGridViewTextBoxColumn BookCount;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private BindingSource readerBindingSource;
+        private TabPage tabLibrarians;
         private DataGridView dataGridView3;
-        private Button button5;
-        private Button button7;
-        private Button button9;
+        public Button button5;
+        public Button button7;
+        public Button button9;
         public TabControl tabControl1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -665,8 +700,8 @@ namespace Projekt
         private DataGridViewCheckBoxColumn isAvailableDataGridViewCheckBoxColumn;
         private DataGridViewTextBoxColumn dateOfReturningDataGridViewTextBoxColumn;
         private ToolStripMenuItem refreshToolStripMenuItem;
-        public TabPage tabLibrarians;
-        public TabPage tabUsers;
+        public Button button11;
+        public Button button12;
     }
 }
 

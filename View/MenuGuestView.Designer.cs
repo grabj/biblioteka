@@ -29,34 +29,15 @@ namespace Projekt
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabUsers.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            // 
-            // button3
-            // 
-            this.button3.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.Visible = false;
-            // 
-            // MenuGuestView
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(587, 470);
-            this.Name = "MenuGuestView";
-            this.tabUsers.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            this.components = new System.ComponentModel.Container();
             this.signupToolStripMenuItem.Text = "Zarejestruj się";
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            tabControl1.Enabled = false;
+            signupToolStripMenuItem.Visible = true;
+            toolStripSeparator1.Visible = true;
         }
         
         #endregion

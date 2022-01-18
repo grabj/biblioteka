@@ -15,9 +15,9 @@ namespace Projekt
         public Menu()
         {
             InitializeComponent();
+            dataGridView1.DataSource = BookList.Books;
             dataGridView2.DataSource = ReaderList.Readers;
             dataGridView3.DataSource = LibrarianList.Librarians;
-            dataGridView1.DataSource = BookList.Books; 
         }
         public virtual void button1_Click(object sender, EventArgs e)
         {
@@ -38,12 +38,18 @@ namespace Projekt
 
         public virtual void statusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Zalogowano jako admin", "Stan konta");
+            MessageBox.Show("\n ", "Stan konta");
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             View.SignupForm signupForm = new View.SignupForm();
+            signupForm.user_Type(2);
             signupForm.Show();
         }
 
@@ -65,30 +71,61 @@ namespace Projekt
             confirmForm.Show();
         }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void userBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void button9_Click(object sender, EventArgs e)
+        {
+            View.SignupForm signupForm = new View.SignupForm();
+            signupForm.user_Type(1);
+            signupForm.Show();
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            View.AddBookForm addBookForm = new View.AddBookForm();
-            addBookForm.Show();
-        }
-
-        private void dataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-
+            dataGridView1.Refresh();
+            dataGridView2.Refresh();
+            dataGridView3.Refresh();
         }
 
         private void button8_Click(object sender, EventArgs e)
-        {
+        { 
+            
+        }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = null;
+            dataGridView2.Rows.Clear();
+            dataGridView2.DataSource = ReaderList.Readers;
+            dataGridView2.Update();
+            dataGridView2.Refresh();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            dataGridView3.DataSource = null;
+            dataGridView3.Rows.Clear();
+            dataGridView3.DataSource = ReaderList.Readers;
+            dataGridView3.Update();
+            dataGridView3.Refresh();
         }
     }
 }
