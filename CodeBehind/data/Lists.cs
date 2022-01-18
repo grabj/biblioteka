@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-
     class ReaderList
     {
         public static List<Reader> Readers = new List<Reader>();
@@ -15,7 +14,6 @@ namespace Projekt
         {
             Readers.Add(reader);
         }
-
     }
     class LibrarianList
     {

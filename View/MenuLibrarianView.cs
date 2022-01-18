@@ -8,18 +8,12 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    public partial class MenuGuestView : Menu
+    public partial class MenuLibrarianView : Menu
     {
-        public MenuGuestView()
+        public MenuLibrarianView()
         {
             InitializeComponent();
-            tabControl1.TabPages.Remove(tabUsers);
             tabControl1.TabPages.Remove(tabLibrarians);
-        }
-
-        public override void statusToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Brak danych. Zarejestruj się!", "Stan konta");
         }
     }
 }

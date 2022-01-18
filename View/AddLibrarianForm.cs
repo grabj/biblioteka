@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projekt.View
 {
-    public partial class SignupForm : Form
+    public partial class AddLibrarianForm : Form
     {
-        public SignupForm()
+        public AddLibrarianForm()
         {
             InitializeComponent();
         }
@@ -42,14 +42,14 @@ namespace Projekt.View
 
         private void button_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox2.Text != textBox5.Text || textBox6.Text == "" )
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox2.Text != textBox5.Text || textBox6.Text == "")
             {
                 MessageBox.Show("Uzupełnij informacje", "Niepowodzenie!");
             }
             else
             {
-                Reader newUser = new Reader(textBox1.Text, textBox3.Text, textBox4.Text, textBox2.Text, textBox6.Text);
-                ReaderList.AddReader(newUser);
+                Librarian newUser = new Librarian(textBox1.Text, textBox3.Text, textBox4.Text, textBox2.Text, textBox6.Text);
+                LibrarianList.AddLibrarian(newUser);
 
                 string info = $"\nID: {newUser.ID}\nLogin: {newUser.Login}\nImię: {newUser.FirstName}\nNazwisko: {newUser.LastName}\nE-mail: {newUser.Email}";
 

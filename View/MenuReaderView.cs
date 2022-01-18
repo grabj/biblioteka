@@ -3,23 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projekt
 {
-    public partial class MenuGuestView : Menu
+    public partial class MenuReaderView : Menu
     {
-        public MenuGuestView()
+        public MenuReaderView()
         {
             InitializeComponent();
             tabControl1.TabPages.Remove(tabUsers);
             tabControl1.TabPages.Remove(tabLibrarians);
-        }
-
-        public override void statusToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Brak danych. Zarejestruj się!", "Stan konta");
         }
     }
 }

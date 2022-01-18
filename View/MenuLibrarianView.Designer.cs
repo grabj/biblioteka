@@ -1,7 +1,7 @@
 ﻿
 namespace Projekt
 {
-    partial class MenuGuestView
+    partial class MenuLibrarianView
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -29,36 +29,22 @@ namespace Projekt
         /// </summary>
         private void InitializeComponent()
         {
+            this.tabControl1.SuspendLayout();
             this.tabUsers.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            // 
-            // button3
-            // 
-            this.button3.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.Visible = false;
-            // 
-            // MenuGuestView
+            // MenuLibrarianView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(587, 470);
-            this.Name = "MenuGuestView";
+            this.Name = "MenuLibrarianView";
+            this.tabControl1.ResumeLayout(false);
             this.tabUsers.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.signupToolStripMenuItem.Text = "Zarejestruj się";
+
         }
-        
+
         #endregion
     }
 }
