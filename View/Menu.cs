@@ -58,14 +58,14 @@ namespace Projekt
 
         private void button6_Click(object sender, EventArgs e)
         {
-            View.ConfirmForm confirmForm = new View.ConfirmForm();
-            confirmForm.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            View.ConfirmForm confirmForm = new View.ConfirmForm();
-            confirmForm.Show();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                View.ConfirmDeleteReader confirmDeleteReader = new View.ConfirmDeleteReader();
+                confirmDeleteReader.FindReader(dataGridView2.SelectedCells[0].Value.ToString());
+                confirmDeleteReader.Show();
+            }
+            else
+                MessageBox.Show("Wybierz użytkownika do usunięcia.");
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -102,20 +102,12 @@ namespace Projekt
 
         private void button11_Click(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = null;
-            dataGridView2.Rows.Clear();
-            dataGridView2.DataSource = ReaderList.Readers;
-            dataGridView2.Update();
-            dataGridView2.Refresh();
+            Refresh_Menu();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = null;
-            dataGridView3.Rows.Clear();
-            dataGridView3.DataSource = LibrarianList.Librarians;
-            dataGridView3.Update();
-            dataGridView3.Refresh();
+            Refresh_Menu();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -137,5 +129,46 @@ namespace Projekt
         {
 
         }
+
+        public void Refresh_Menu()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView1.DataSource = BookList.Books;
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            dataGridView2.DataSource = null;
+            dataGridView2.Rows.Clear();
+            dataGridView2.DataSource = ReaderList.Readers;
+            dataGridView2.Update();
+            dataGridView2.Refresh();
+            dataGridView3.DataSource = null;
+            dataGridView3.Rows.Clear();
+            dataGridView3.DataSource = LibrarianList.Librarians;
+            dataGridView3.Update();
+            dataGridView3.Refresh();
+        }
+
+        private void Menu_Load_1(object sender, EventArgs e)
+        {
+            Globals.form = this;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                View.ConfirmDeleteLibrarian confirmDeleteLibrarian = new View.ConfirmDeleteLibrarian();
+                confirmDeleteLibrarian.FindLibrarian(dataGridView3.SelectedCells[0].Value.ToString());
+                confirmDeleteLibrarian.Show();
+            }
+            else
+                MessageBox.Show("Wybierz użytkownika do usunięcia.");
+        }
+    }
+
+    class Globals
+    {
+        public static Menu form;
     }
 }

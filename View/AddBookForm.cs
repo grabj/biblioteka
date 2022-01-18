@@ -32,7 +32,7 @@ namespace Projekt.View
                 string info = $"\nID: {book.BookID}\nTytuł: {book.Title}\nAutor: {book.Author}\nNr ISBN: {book.ISBN}";
 
                 MessageBox.Show("Dodano nową książkę o danych:" + info, "Sukces!");
-
+                Globals.form.Refresh_Menu();
                 this.Hide();
             }
         }

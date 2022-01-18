@@ -16,5 +16,10 @@ namespace Projekt.View
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

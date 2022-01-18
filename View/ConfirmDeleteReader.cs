@@ -10,31 +10,31 @@ using System.Windows.Forms;
 
 namespace Projekt.View
 {
-    public partial class ConfirmDeleteLibrarian : Form
+    public partial class ConfirmDeleteReader : Form
     {
         private uint _DeleteID;
-        private uint _librarianID;
+        private uint _readerID;
 
-        public ConfirmDeleteLibrarian()
+        public ConfirmDeleteReader()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LibrarianList.RemoveLibrarian(_DeleteID);
+            ReaderList.RemoveReader(_DeleteID);
             Globals.form.Refresh_Menu();
             this.Hide();
         }
 
-        public void FindLibrarian(string librarianID)
+        public void FindReader(string readerID)
         {
-            _librarianID = Convert.ToUInt32(librarianID);
-            LibrarianList.Librarians.ForEach(delegate (Librarian Librarian)
+            _readerID = Convert.ToUInt32(readerID);
+            ReaderList.Readers.ForEach(delegate (Reader Reader)
             {
-                if (Librarian.ID == _librarianID)
+                if (Reader.ID == _readerID)
                 {
-                    _DeleteID = _librarianID;
+                    _DeleteID = _readerID;
                 }
             });
 
@@ -44,12 +44,9 @@ namespace Projekt.View
             this.Hide();
         }
 
-
-
         private void ConfirmForm_Load(object sender, EventArgs e)
         {
 
         }
     }
 }
-

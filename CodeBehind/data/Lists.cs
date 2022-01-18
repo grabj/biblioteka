@@ -15,6 +15,10 @@ namespace Projekt
         {
             Readers.Add(reader);
         }
+        public static void RemoveReader(uint ID)
+        {
+            Readers.RemoveAll(Readers => Readers.ID == ID);
+        }
 
     }
     class LibrarianList
@@ -24,6 +28,10 @@ namespace Projekt
         public static void AddLibrarian(Librarian librarian)
         {
             Librarians.Add(librarian);
+        }
+        public static void RemoveLibrarian(uint ID)
+        {
+            Librarians.RemoveAll(Librarians => Librarians.ID == ID);
         }
     }
     class BookList

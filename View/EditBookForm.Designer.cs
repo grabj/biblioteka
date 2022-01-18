@@ -41,8 +41,8 @@ namespace Projekt.View
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +111,7 @@ namespace Projekt.View
             this.button.TabIndex = 43;
             this.button.Text = "Zatwierdź";
             this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.button_Click);
             // 
             // label2
             // 
@@ -137,16 +138,16 @@ namespace Projekt.View
             this.label3.TabIndex = 47;
             this.label3.Text = "Wpisz nr ID książki do edycji:";
             // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(Projekt.Book);
-            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(186, 31);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(160, 20);
             this.textBox5.TabIndex = 48;
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(Projekt.Book);
             // 
             // EditBookForm
             // 

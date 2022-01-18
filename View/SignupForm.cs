@@ -63,6 +63,7 @@ namespace Projekt.View
                     string info = $"\nID: {newLibrarian.ID}\nLogin: {newLibrarian.Login}\nImię: {newLibrarian.FirstName}\nNazwisko: {newLibrarian.LastName}\nE-mail: {newLibrarian.Email}";
 
                     MessageBox.Show("Dodano nowego użytkownika o danych:" + info, "Sukces!");
+                    Globals.form.Refresh_Menu();
                 }
                 else if (_user == 2)
                 {
@@ -73,7 +74,7 @@ namespace Projekt.View
                     string info = $"\nID: {newReader.ID}\nLogin: {newReader.Login}\nImię: {newReader.FirstName}\nNazwisko: {newReader.LastName}\nE-mail: {newReader.Email}";
 
                     MessageBox.Show("Dodano nowego użytkownika o danych:" + info, "Sukces!");
-                    
+                    Globals.form.Refresh_Menu();
                 }
                 else
                 MessageBox.Show("Wystąpił błąd podczas dodawania użytkownika.");

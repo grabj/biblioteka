@@ -1,7 +1,7 @@
 ﻿
 namespace Projekt.View
 {
-    partial class ConfirmForm
+    partial class ConfirmDeleteReader
     {
         /// <summary>
         /// Required designer variable.
