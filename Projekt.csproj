@@ -49,7 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodeBehind\data\Lists.cs" />
-    <Compile Include="CodeBehind\data\UserType.cs" />
     <Compile Include="CodeBehind\objects\Admin.cs" />
     <Compile Include="CodeBehind\objects\Book.cs" />
     <Compile Include="CodeBehind\objects\Librarian.cs" />
