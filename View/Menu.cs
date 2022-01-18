@@ -125,11 +125,11 @@ namespace Projekt
 
         private void button13_Click(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = null;
-            dataGridView3.Rows.Clear();
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
             dataGridView1.DataSource = BookList.Books;
-            dataGridView3.Update();
-            dataGridView3.Refresh();
+            dataGridView1.Update();
+            dataGridView1.Refresh();
         }
 
         private void button14_Click(object sender, EventArgs e)
