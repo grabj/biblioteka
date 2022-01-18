@@ -58,6 +58,7 @@ namespace Projekt
             this.dateOfReturningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabUsers = new System.Windows.Forms.TabPage();
+            this.button11 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.iDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +72,7 @@ namespace Projekt
             this.button8 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.tabLibrarians = new System.Windows.Forms.TabPage();
+            this.button12 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +84,8 @@ namespace Projekt
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabBooks.SuspendLayout();
@@ -93,6 +97,7 @@ namespace Projekt
             this.tabLibrarians.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -178,7 +183,6 @@ namespace Projekt
             this.button3.TabIndex = 4;
             this.button3.Text = "Dodaj pozycję";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -191,6 +195,7 @@ namespace Projekt
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl1.Controls.Add(this.tabBooks);
             this.tabControl1.Controls.Add(this.tabUsers);
             this.tabControl1.Controls.Add(this.tabLibrarians);
@@ -210,14 +215,14 @@ namespace Projekt
             this.tabBooks.Controls.Add(this.button4);
             this.tabBooks.Controls.Add(this.button2);
             this.tabBooks.Controls.Add(this.button3);
-            this.tabBooks.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabBooks.Location = new System.Drawing.Point(4, 28);
+            this.tabBooks.Location = new System.Drawing.Point(4, 31);
             this.tabBooks.Name = "tabBooks";
             this.tabBooks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBooks.Size = new System.Drawing.Size(555, 390);
+            this.tabBooks.Size = new System.Drawing.Size(555, 387);
             this.tabBooks.TabIndex = 0;
             this.tabBooks.Text = "          Katalog          ";
             this.tabBooks.UseVisualStyleBackColor = true;
+            this.tabBooks.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // dataGridView1
             // 
@@ -246,6 +251,7 @@ namespace Projekt
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(543, 314);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BookID
             // 
@@ -330,18 +336,28 @@ namespace Projekt
             // 
             // tabUsers
             // 
+            this.tabUsers.Controls.Add(this.button11);
             this.tabUsers.Controls.Add(this.dataGridView2);
             this.tabUsers.Controls.Add(this.button6);
             this.tabUsers.Controls.Add(this.button8);
             this.tabUsers.Controls.Add(this.button10);
-            this.tabUsers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabUsers.Location = new System.Drawing.Point(4, 28);
+            this.tabUsers.Location = new System.Drawing.Point(4, 31);
             this.tabUsers.Name = "tabUsers";
             this.tabUsers.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUsers.Size = new System.Drawing.Size(555, 390);
+            this.tabUsers.Size = new System.Drawing.Size(555, 387);
             this.tabUsers.TabIndex = 1;
             this.tabUsers.Text = "Czytelnicy";
             this.tabUsers.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(342, 358);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(85, 23);
+            this.button11.TabIndex = 14;
+            this.button11.Text = "Odśwież";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // dataGridView2
             // 
@@ -367,7 +383,7 @@ namespace Projekt
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(543, 338);
             this.dataGridView2.TabIndex = 13;
-            this.dataGridView2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEnter);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // iDCol
             // 
@@ -445,7 +461,7 @@ namespace Projekt
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(162, 23);
             this.button8.TabIndex = 11;
-            this.button8.Text = "Edytuj dane użytkownika";
+            this.button8.Text = "Edytuj dane czytelnika";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -455,23 +471,33 @@ namespace Projekt
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(162, 23);
             this.button10.TabIndex = 10;
-            this.button10.Text = "Dodaj nowego użytkownika";
+            this.button10.Text = "Dodaj nowego czytelnika";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // tabLibrarians
             // 
+            this.tabLibrarians.Controls.Add(this.button12);
             this.tabLibrarians.Controls.Add(this.dataGridView3);
             this.tabLibrarians.Controls.Add(this.button5);
             this.tabLibrarians.Controls.Add(this.button7);
             this.tabLibrarians.Controls.Add(this.button9);
-            this.tabLibrarians.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabLibrarians.Location = new System.Drawing.Point(4, 28);
+            this.tabLibrarians.Location = new System.Drawing.Point(4, 31);
             this.tabLibrarians.Name = "tabLibrarians";
-            this.tabLibrarians.Size = new System.Drawing.Size(555, 390);
+            this.tabLibrarians.Size = new System.Drawing.Size(555, 387);
             this.tabLibrarians.TabIndex = 2;
             this.tabLibrarians.Text = "Pracownicy";
             this.tabLibrarians.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(342, 358);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(85, 23);
+            this.button12.TabIndex = 18;
+            this.button12.Text = "Odśwież";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // dataGridView3
             // 
@@ -496,6 +522,7 @@ namespace Projekt
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(543, 338);
             this.dataGridView3.TabIndex = 17;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -577,11 +604,16 @@ namespace Projekt
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Projekt.User);
+            this.userBindingSource.CurrentChanged += new System.EventHandler(this.userBindingSource_CurrentChanged);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 470);
+            this.ClientSize = new System.Drawing.Size(587, 463);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -601,6 +633,7 @@ namespace Projekt
             this.tabLibrarians.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,12 +650,14 @@ namespace Projekt
         public Button button3;
         public Button button4;
         private TabPage tabBooks;
+        private TabPage tabUsers;
         public ToolStripMenuItem signupToolStripMenuItem;
         public ToolStripSeparator toolStripSeparator1;
         public Button button6;
         public Button button8;
         public Button button10;
         private DataGridView dataGridView2;
+        private BindingSource userBindingSource;
         private BindingSource bookBindingSource;
         public DataGridView dataGridView1;
         private BindingSource librarianBindingSource;
@@ -634,10 +669,11 @@ namespace Projekt
         private DataGridViewTextBoxColumn BookCount;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private BindingSource readerBindingSource;
+        private TabPage tabLibrarians;
         private DataGridView dataGridView3;
-        private Button button5;
-        private Button button7;
-        private Button button9;
+        public Button button5;
+        public Button button7;
+        public Button button9;
         public TabControl tabControl1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -657,6 +693,9 @@ namespace Projekt
         private DataGridViewTextBoxColumn dateOfReturningDataGridViewTextBoxColumn;
         public TabPage tabLibrarians;
         public TabPage tabUsers;
+        private ToolStripMenuItem refreshToolStripMenuItem;
+        public Button button11;
+        public Button button12;
     }
 }
 
