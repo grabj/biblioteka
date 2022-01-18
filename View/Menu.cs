@@ -70,11 +70,6 @@ namespace Projekt
 
         }
 
-        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             View.AddBookForm addBookForm = new View.AddBookForm();
@@ -89,6 +84,23 @@ namespace Projekt
         private void button8_Click(object sender, EventArgs e)
         {
 
+        }
+        private void button11_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = null;
+            dataGridView2.Rows.Clear();
+            dataGridView2.DataSource = ReaderList.Readers;
+            dataGridView2.Update();
+            dataGridView2.Refresh();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            dataGridView3.DataSource = null;
+            dataGridView3.Rows.Clear();
+            dataGridView3.DataSource = ReaderList.Readers;
+            dataGridView3.Update();
+            dataGridView3.Refresh();
         }
     }
 }
