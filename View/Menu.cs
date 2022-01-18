@@ -76,6 +76,10 @@ namespace Projekt
             
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+        
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
