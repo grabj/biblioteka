@@ -27,7 +27,10 @@ namespace Projekt
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                label1.Text = "";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,7 +74,8 @@ namespace Projekt
                         break;
                     }
                 }
-                //MessageBox.Show("Podano błędny login lub błędne hasło");
+                label1.Text = "Podano błędny login lub hasło";
+                label1.ForeColor = Color.DarkRed;
                 break;
             }
         }

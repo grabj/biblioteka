@@ -27,3 +27,4 @@ C:\Users\justy\Source\Repos\biblio\obj\Debug\Projekt.csproj.CoreCompileInputs.ca
 C:\Users\justy\Source\Repos\biblio\obj\Debug\Projekt.exe
 C:\Users\justy\Source\Repos\biblio\obj\Debug\Projekt.pdb
 C:\Users\justy\source\repos\biblio\obj\Debug\Projekt.View.AddBookForm.resources
+C:\Users\justy\source\repos\biblio\obj\Debug\Projekt.View.EditBookForm.resources

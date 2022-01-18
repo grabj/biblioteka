@@ -32,6 +32,7 @@ namespace Projekt.View
             this.components = new System.ComponentModel.Container();
             button3.Visible = false;
             button4.Visible = false;
+            button14.Visible = false;
         }
 
         #endregion
