@@ -21,7 +21,7 @@ namespace Projekt
             Librarian user2 = new Librarian("Adam", "Filipiak", "FilA@wp.pl", "Filipiak", "af");
             LibrarianList.AddLibrarian(user2);
 
-            Book book1 = new Book(34534535, "Obcy", "Albert", "Camus");
+            Book book1 = new Book("3345-3453-4535", "Obcy", "Albert", "Camus");
             BookList.AddBook(book1);
         }
 
@@ -71,7 +71,7 @@ namespace Projekt
                         break;
                     }
                 }
-                MessageBox.Show("Podano błędny login lub błędne hasło");
+                //MessageBox.Show("Podano błędny login lub błędne hasło");
                 break;
             }
         }

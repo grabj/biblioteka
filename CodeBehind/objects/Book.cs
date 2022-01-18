@@ -9,7 +9,7 @@ namespace Projekt
     class Book
     {
         private static uint numOfBooks;
-        private uint _iSBN;
+        private string _iSBN;
         private string _title;
         private string _authorFirstName;
         private string _authorLastName;
@@ -18,7 +18,7 @@ namespace Projekt
         private DateTime _dateOfReturning;
         private bool _isAvailable = true;
 
-        public Book(uint iSBN, string title, string authorFirstName, string authorLastName)
+        public Book(string iSBN, string title, string authorFirstName, string authorLastName)
         {
             _iSBN = iSBN;
             _title = title;
@@ -37,7 +37,7 @@ namespace Projekt
         }
 
         public uint BookID { get; }
-        public uint ISBN
+        public string ISBN
         { 
             get => _iSBN;
             set => _iSBN = value;

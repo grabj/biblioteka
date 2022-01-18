@@ -85,7 +85,6 @@ namespace Projekt
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabBooks.SuspendLayout();
@@ -136,26 +135,26 @@ namespace Projekt
             // signupToolStripMenuItem
             // 
             this.signupToolStripMenuItem.Name = "signupToolStripMenuItem";
-            this.signupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.signupToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.signupToolStripMenuItem.Text = "Utwórz konto";
             this.signupToolStripMenuItem.Click += new System.EventHandler(this.signupToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.logoutToolStripMenuItem.Text = "Wyloguj";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.exitToolStripMenuItem.Text = "Wyjdź";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -183,6 +182,7 @@ namespace Projekt
             this.button3.TabIndex = 4;
             this.button3.Text = "Dodaj pozycję";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -222,7 +222,6 @@ namespace Projekt
             this.tabBooks.TabIndex = 0;
             this.tabBooks.Text = "          Katalog          ";
             this.tabBooks.UseVisualStyleBackColor = true;
-            this.tabBooks.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // dataGridView1
             // 
@@ -332,7 +331,7 @@ namespace Projekt
             // 
             // bookBindingSource
             // 
-            this.bookBindingSource.DataSource = typeof(Book);
+            this.bookBindingSource.DataSource = typeof(Projekt.Book);
             // 
             // tabUsers
             // 
@@ -443,7 +442,7 @@ namespace Projekt
             // 
             // readerBindingSource
             // 
-            this.readerBindingSource.DataSource = typeof(Reader);
+            this.readerBindingSource.DataSource = typeof(Projekt.Reader);
             // 
             // button6
             // 
@@ -574,7 +573,7 @@ namespace Projekt
             // 
             // librarianBindingSource
             // 
-            this.librarianBindingSource.DataSource = typeof(Librarian);
+            this.librarianBindingSource.DataSource = typeof(Projekt.Librarian);
             // 
             // button5
             // 
@@ -606,8 +605,7 @@ namespace Projekt
             // 
             // userBindingSource
             // 
-            this.userBindingSource.DataSource = typeof(User);
-            this.userBindingSource.CurrentChanged += new System.EventHandler(this.userBindingSource_CurrentChanged);
+            this.userBindingSource.DataSource = typeof(Projekt.User);
             // 
             // Menu
             // 
@@ -691,7 +689,6 @@ namespace Projekt
         private DataGridViewTextBoxColumn dateOfReturningDataGridViewTextBoxColumn;
         public TabPage tabLibrarians;
         public TabPage tabUsers;
-        private ToolStripMenuItem refreshToolStripMenuItem;
         public Button button11;
         public Button button12;
     }
