@@ -332,7 +332,7 @@ namespace Projekt
             // 
             // bookBindingSource
             // 
-            this.bookBindingSource.DataSource = typeof(Projekt.Book);
+            this.bookBindingSource.DataSource = typeof(Book);
             // 
             // tabUsers
             // 
@@ -443,7 +443,7 @@ namespace Projekt
             // 
             // readerBindingSource
             // 
-            this.readerBindingSource.DataSource = typeof(Projekt.Reader);
+            this.readerBindingSource.DataSource = typeof(Reader);
             // 
             // button6
             // 
@@ -574,7 +574,7 @@ namespace Projekt
             // 
             // librarianBindingSource
             // 
-            this.librarianBindingSource.DataSource = typeof(Projekt.Librarian);
+            this.librarianBindingSource.DataSource = typeof(Librarian);
             // 
             // button5
             // 
@@ -606,7 +606,7 @@ namespace Projekt
             // 
             // userBindingSource
             // 
-            this.userBindingSource.DataSource = typeof(Projekt.User);
+            this.userBindingSource.DataSource = typeof(User);
             this.userBindingSource.CurrentChanged += new System.EventHandler(this.userBindingSource_CurrentChanged);
             // 
             // Menu
@@ -650,7 +650,6 @@ namespace Projekt
         public Button button3;
         public Button button4;
         private TabPage tabBooks;
-        private TabPage tabUsers;
         public ToolStripMenuItem signupToolStripMenuItem;
         public ToolStripSeparator toolStripSeparator1;
         public Button button6;
@@ -669,7 +668,6 @@ namespace Projekt
         private DataGridViewTextBoxColumn BookCount;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private BindingSource readerBindingSource;
-        private TabPage tabLibrarians;
         private DataGridView dataGridView3;
         public Button button5;
         public Button button7;

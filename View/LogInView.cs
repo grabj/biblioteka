@@ -40,16 +40,47 @@ namespace Projekt
         private void button2_Click(object sender, EventArgs e)
         {
             Admin admin = Admin.GetInstance;
-            if (textBox1.Text == admin.Login && textBox2.Text == admin.Password)
+
+            Menu menuAdmin = new Menu();
+            View.MenuReaderForm menuReaderForm = new View.MenuReaderForm();
+            View.MenuLibrarianForm menuLibrarianForm = new View.MenuLibrarianForm();
+
+            while (true)
             {
-                Menu menuUser = new Menu();
-                this.Hide();
-                menuUser.Show();
+                if (Validate(admin.Login, admin.Password))
+                {
+                    menuAdmin.Show();
+                    this.Hide();
+                    break;
+                }
+                foreach (var reader in ReaderList.Readers)
+                {
+                    if (Validate(reader.Login, reader.Password))
+                    {
+                        menuReaderForm.Show();
+                        this.Hide();
+                        break;
+                    }
+                }
+                foreach (var librarian in LibrarianList.Librarians)
+                {
+                    if (Validate(librarian.Login, librarian.Password))
+                    {
+                        menuLibrarianForm.Show();
+                        this.Hide();
+                        break;
+                    }
+                }
+                MessageBox.Show("Podano błędny login lub błędne hasło");
+                break;
             }
-            //if (textBox1.Text == )
-            Menu menuUser2 = new Menu();
-            this.Hide();
-            menuUser2.Show();
+        }
+        private bool Validate(string login, string password)
+        {
+            bool valid = false;
+            if (textBox1.Text == login && textBox2.Text == password)
+                valid = true;
+            return valid;
         }
     }
 }
