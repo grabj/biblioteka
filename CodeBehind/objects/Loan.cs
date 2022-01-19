@@ -8,9 +8,6 @@ namespace Projekt
 {
     class Loan
     {
-        private readonly ReaderList _readers;
-        private readonly BookList _books;
-
         private uint _numOfLoans;
         private DateTime _dateOfLoan;
         private Reader _loaner;
@@ -35,7 +32,7 @@ namespace Projekt
             get => _loaner;
             set => _loaner = value;
         }
-        public Book book
+        public Book Book
         {
             get => _book;
             set => _book = value;

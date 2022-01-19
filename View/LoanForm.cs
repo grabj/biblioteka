@@ -58,13 +58,17 @@ namespace Projekt.View
 
         private void button_Click(object sender, EventArgs e)
         {
-            if (labelBook.Text != "..." && labelLoaner.Text != "..." && loaner.BookCount <= 3)
+            if (labelBook.Text != "..." && labelLoaner.Text != "..." && loaner.BookCount < 3)
             {
-                MessageBox.Show("OK");
+                MessageBox.Show($"Wypożyczenie przebiegło pomyślnie.", "Sukces");
                 this.Hide();
 
                 Loan loan = new Loan(DateTime.Today, loaner, bookL);
                 LoanList.AddLoan(loan);
+            }
+            else
+            {
+                MessageBox.Show($"Wypożyczenie tej książki przez tego użytkownika jest niemożliwe", "Błąd");
             }
         }
 

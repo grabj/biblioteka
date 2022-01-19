@@ -39,7 +39,7 @@ namespace Projekt
 
         public virtual void statusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("\n ", "Stan konta");
+            MessageBox.Show("Zalogowano jako Administrator.", "Stan konta");
         }
 
         private void button10_Click(object sender, EventArgs e)
