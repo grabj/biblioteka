@@ -100,6 +100,12 @@
     <Compile Include="View\EditBookForm.Designer.cs">
       <DependentUpon>EditBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditBookForm.resx">
       <DependentUpon>EditBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoanForm.resx">
       <DependentUpon>LoanForm.cs</DependentUpon>

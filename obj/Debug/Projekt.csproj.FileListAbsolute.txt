@@ -71,3 +71,4 @@ C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.View.ReturnForm.
 C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.MenuGuestView.resources
 C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.View.MenuLibrarianForm.resources
 C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.View.MenuReaderForm.resources
+C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.View.EditUserForm.resources

@@ -32,8 +32,8 @@ namespace Projekt.View
                 labelLoaner.Text = loaner.FirstName + " " + loaner.LastName;
             }
 
-            labelDate1.Text = DateTime.Today.ToString();
-            labelDate2.Text = DateTime.Today.AddDays(30).ToString();
+            labelDate1.Text = DateTime.Today.ToShortDateString();
+            labelDate2.Text = DateTime.Today.AddDays(30).ToShortDateString();
 
             labelBook.Text = "\"" + bookL.Title + "\"";
             textBox2.Text = _bookID.ToString();
@@ -76,7 +76,7 @@ namespace Projekt.View
             {
                 MessageBox.Show($"Wypożyczenie przebiegło pomyślnie.", "Sukces");
 
-                Loan loan = new Loan(DateTime.Today, loaner, bookL);
+                Loan loan = new Loan(DateTime.Today.Date, loaner, bookL);
                 LoanList.AddLoan(loan);
 
                 this.Dispose();

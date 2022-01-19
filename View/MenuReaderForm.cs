@@ -33,7 +33,7 @@ namespace Projekt.View
                 {
                     if (loan.LoanerID == reader.ID)
                     {
-                        info = $"{count}. \"{loan.Book.Title}\", {loan.Book.Author} \t do dnia {loan.DateOfReturn}.";
+                        info = $"{count}. \"{loan.Book.Title}\", {loan.Book.Author} \t do dnia {loan.DateOfReturn.ToShortDateString()}.";
                         infos.Add(info);
                         count++;
                     }

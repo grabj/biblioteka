@@ -13,7 +13,7 @@ namespace Projekt
 
         public Reader(string firstName, string lastName, string email, string password, string login) : base(firstName, lastName, email, password, login)
         {
-            ID = numOfReaders + 1000;
+            ID = numOfReaders + 100;
             numOfReaders++;
         }
 

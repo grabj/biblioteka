@@ -40,10 +40,7 @@ namespace Projekt
             Application.Exit();
         }
 
-        public virtual void statusToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+        public virtual void statusToolStripMenuItem_Click(object sender, EventArgs e) { }
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -94,7 +91,26 @@ namespace Projekt
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (dataGridView2.SelectedRows.Count > 0)
+            {
+                View.EditUserForm editUser = new View.EditUserForm();
+                editUser.FindReader(dataGridView2.SelectedCells[0].Value.ToString());
+                editUser.Show();
+            }
+            else
+                MessageBox.Show("Wybierz użytkownika do edycji.");
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (dataGridView3.SelectedRows.Count > 0)
+            {
+                View.EditUserForm editUser = new View.EditUserForm();
+                editUser.FindLibrarian(dataGridView3.SelectedCells[0].Value.ToString());
+                editUser.Show();
+            }
+            else
+                MessageBox.Show("Wybierz użytkownika do edycji.");
         }
 
         public void button1_Click(object sender, EventArgs e)

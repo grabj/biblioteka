@@ -620,6 +620,7 @@ namespace Projekt
             this.button7.TabIndex = 15;
             this.button7.Text = "Edytuj dane pracownika";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button9
             // 

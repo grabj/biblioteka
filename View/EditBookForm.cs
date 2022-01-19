@@ -37,7 +37,8 @@ namespace Projekt.View
                 bookToEdit.AuthorLastName = textBox3.Text;
                 bookToEdit.ISBN = textBox4.Text;
 
-                MessageBox.Show("Dane książki zostały zmienione.");
+                MessageBox.Show("Dane książki zostały zmienione.", "OK");
+                Globals.form.Refresh_Menu();
                 this.Close();
             }
             else
