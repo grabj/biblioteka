@@ -46,3 +46,5 @@ C:\Users\krzysztof.nowicki\source\repos\NewBiblioteka\obj\Debug\Projekt.csproj.G
 C:\Users\krzysztof.nowicki\source\repos\NewBiblioteka\obj\Debug\Projekt.csproj.CoreCompileInputs.cache
 C:\Users\krzysztof.nowicki\source\repos\NewBiblioteka\obj\Debug\Projekt.exe
 C:\Users\krzysztof.nowicki\source\repos\NewBiblioteka\obj\Debug\Projekt.pdb
+C:\Users\krzysztof.nowicki\source\repos\NewBiblioteka\obj\Debug\Projekt.csproj.AssemblyReference.cache
+C:\Users\krzysztof.nowicki\source\repos\NewBiblioteka\obj\Debug\Projekt.View.ConfirmDeleteBook.resources

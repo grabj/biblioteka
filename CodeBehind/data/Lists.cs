@@ -42,6 +42,10 @@ namespace Projekt
         {
             Books.Add(book);
         }
+        public static void RemoveBook(uint ID)
+        {
+            Books.RemoveAll(Books => Books.BookID == ID);
+        }
     }
     class LoanList
     {
@@ -50,6 +54,10 @@ namespace Projekt
         public static void AddLoan(Loan loan)
         {
             Loans.Add(loan);
+        }
+        public static void RemoveReader(uint ID)
+        {
+            Loans.RemoveAll(Loans => Loans.ID == ID);
         }
     }
 }

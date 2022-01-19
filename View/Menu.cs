@@ -58,7 +58,7 @@ namespace Projekt
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView2.SelectedRows.Count > 0)
             {
                 View.ConfirmDeleteReader confirmDeleteReader = new View.ConfirmDeleteReader();
                 confirmDeleteReader.FindReader(dataGridView2.SelectedCells[0].Value.ToString());
@@ -127,7 +127,14 @@ namespace Projekt
 
         private void button14_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                View.ConfirmDeleteBook confirmDeleteBook = new View.ConfirmDeleteBook();
+                confirmDeleteBook.FindBook(dataGridView1.SelectedCells[0].Value.ToString());
+                confirmDeleteBook.Show();
+            }
+            else
+                MessageBox.Show("Wybierz książkę do usunięcia.");
         }
 
         public void Refresh_Menu()
@@ -156,7 +163,7 @@ namespace Projekt
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView3.SelectedRows.Count > 0)
             {
                 View.ConfirmDeleteLibrarian confirmDeleteLibrarian = new View.ConfirmDeleteLibrarian();
                 confirmDeleteLibrarian.FindLibrarian(dataGridView3.SelectedCells[0].Value.ToString());
