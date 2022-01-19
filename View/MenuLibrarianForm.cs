@@ -15,5 +15,10 @@ namespace Projekt.View
             InitializeComponent();
             tabControl1.TabPages.Remove(tabLibrarians);
         }
+
+        public override void statusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Zalogowano jako Bibliotekarz.", "Stan konta");
+        }
     }
 }

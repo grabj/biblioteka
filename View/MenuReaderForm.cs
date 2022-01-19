@@ -17,5 +17,12 @@ namespace Projekt.View
             tabControl1.TabPages.Remove(tabLibrarians);
             tabControl1.TabPages.Remove(tabUsers);
         }
+
+        public override void statusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int booksLent = LogInView.ActiveReader.BookCount;
+
+            MessageBox.Show($"Zalogowano jako Czytelnik.\nWypożyczyłeś {booksLent} z 3 książek.", "Stan konta");
+        }
     }
 }

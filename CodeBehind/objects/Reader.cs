@@ -24,15 +24,5 @@ namespace Projekt
         }
 
         public uint ID { get; }
-
-/*        public string DisplayReader(uint iD)
-        {
-            string result = "";
-            if (ID == iD)
-            {
-                result = $"Dane użytkownika:\nID: {ID}\nLogin: {Login}\nImię: {FirstName}\nNazwisko: {LastName}\nE-mail: {Email}";
-            }
-            return result;
-        }*/
     }
 }
