@@ -33,23 +33,32 @@ namespace Projekt.View
         private void button1_Click(object sender, EventArgs e)
         {
             int count = 1;
+            bool readerFound = false;
 
             foreach (var reader in ReaderList.Readers)
             {
                 if (textBox1.Text == reader.ID.ToString())
                 {
                     loanerR = reader;
+                    readerFound = true;
                 }
             }
-            foreach (var loan in LoanList.Loans)
+            if (readerFound)
             {
-                if (loan.LoanerID == loanerR.ID)
+                foreach (var loan in LoanList.Loans)
                 {
-                    string info = $"{count}. \"{loan.Book.Title}\", {loan.Book.Author} \t do dnia {loan.DateOfReturn.ToShortDateString()}";
-                    listBox1.Items.Add(info);
-                    count++;
-                    loanR = loan;
+                    if (loan.LoanerID == loanerR.ID)
+                    {
+                        string info = $"{count}. \"{loan.Book.Title}\", {loan.Book.Author} \t do dnia {loan.DateOfReturn.ToShortDateString()}";
+                        listBox1.Items.Add(info);
+                        count++;
+                        loanR = loan;
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Nie znaleziono uzytkownika o podanym ID", "Błąd");
             }
         }
 

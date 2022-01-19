@@ -54,6 +54,7 @@ namespace Projekt.View
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            labelLoaner.Text = "...";
             foreach (var reader in ReaderList.Readers)
             {
                 if (textBox1.Text == reader.ID.ToString())
