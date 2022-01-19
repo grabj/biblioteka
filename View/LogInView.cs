@@ -15,14 +15,6 @@ namespace Projekt
         public LogInView()
         {
             InitializeComponent();
-            Reader user1 = new Reader("Ewa", "Nowak", "EA@wp.pl", "Nowak", "en");
-            ReaderList.AddReader(user1);
-
-            Librarian user2 = new Librarian("Adam", "Filipiak", "FilA@wp.pl", "Filipiak", "af");
-            LibrarianList.AddLibrarian(user2);
-
-            Book book1 = new Book("3345-3453-4535", "Obcy", "Albert", "Camus");
-            BookList.AddBook(book1);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

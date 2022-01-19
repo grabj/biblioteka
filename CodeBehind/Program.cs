@@ -16,6 +16,7 @@ namespace Projekt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            data.helper.GenerateSampleData();
             Application.Run(new LogInView());
         }
     }

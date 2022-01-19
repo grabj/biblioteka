@@ -63,6 +63,7 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeBehind\data\helper.cs" />
     <Compile Include="CodeBehind\data\Lists.cs" />
     <Compile Include="CodeBehind\objects\Admin.cs" />
     <Compile Include="CodeBehind\objects\Book.cs" />
