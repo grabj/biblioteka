@@ -68,3 +68,6 @@ C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.csproj.CoreCompi
 C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.exe
 C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.pdb
 C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.View.ReturnForm.resources
+C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.MenuGuestView.resources
+C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.View.MenuLibrarianForm.resources
+C:\Users\justy\source\repos\bibliotekaProjekt\obj\Debug\Projekt.View.MenuReaderForm.resources

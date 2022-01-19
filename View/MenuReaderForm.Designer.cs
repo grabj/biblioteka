@@ -29,10 +29,37 @@ namespace Projekt.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            button3.Visible = false;
-            button4.Visible = false;
-            button14.Visible = false;
+            this.tabControl1.SuspendLayout();
+            this.tabLibrarians.SuspendLayout();
+            this.tabUsers.SuspendLayout();
+            this.tabLoans.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // button3
+            // 
+            this.button3.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Visible = false;
+            // 
+            // button14
+            // 
+            this.button14.Visible = false;
+            // 
+            // MenuReaderForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(587, 463);
+            this.Name = "MenuReaderForm";
+            this.Load += new System.EventHandler(this.MenuReaderForm_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabLibrarians.ResumeLayout(false);
+            this.tabUsers.ResumeLayout(false);
+            this.tabLoans.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

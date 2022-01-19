@@ -13,14 +13,14 @@ namespace Projekt
         public MenuGuestView()
         {
             InitializeComponent();
+        }
+
+        private void MenuGuestView_Load(object sender, EventArgs e)
+        {
             tabControl1.TabPages.Remove(tabLibrarians);
             tabControl1.TabPages.Remove(tabUsers);
             tabControl1.TabPages.Remove(tabLoans);
-        }
-
-        public override void statusToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Brak danych. Zarejestruj się!", "Stan konta");
+            signupToolStripMenuItem.Text = "Zarejestruj się";
         }
     }
 }

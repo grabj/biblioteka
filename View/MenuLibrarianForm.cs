@@ -13,12 +13,11 @@ namespace Projekt.View
         public MenuLibrarianForm()
         {
             InitializeComponent();
-            tabControl1.TabPages.Remove(tabLibrarians);
         }
 
-        public override void statusToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MenuLibrarianForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Zalogowano jako Bibliotekarz.", "Stan konta");
+            tabControl1.TabPages.Remove(tabLibrarians);
         }
     }
 }

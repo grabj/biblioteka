@@ -42,7 +42,7 @@ namespace Projekt
 
         public virtual void statusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Zalogowano jako Administrator.", "Stan konta");
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -99,9 +99,14 @@ namespace Projekt
 
         public void button1_Click(object sender, EventArgs e)
         {
-            View.LoanForm loanForm = new View.LoanForm();
-            loanForm.FindBook(dataGridView1.SelectedCells[0].Value.ToString());
-            loanForm.Show();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                View.LoanForm loanForm = new View.LoanForm();
+                loanForm.FindBook(dataGridView1.SelectedCells[0].Value.ToString());
+                loanForm.Show();
+            }
+            else
+                MessageBox.Show("Wybierz książkę, którą chcesz wypożyczyć.");
         }
 
         private void button4_Click(object sender, EventArgs e)

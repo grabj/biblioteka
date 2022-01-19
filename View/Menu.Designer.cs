@@ -174,8 +174,9 @@ namespace Projekt
             // statusToolStripMenuItem
             // 
             this.statusToolStripMenuItem.Name = "statusToolStripMenuItem";
-            this.statusToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.statusToolStripMenuItem.Text = "Stan konta";
+            this.statusToolStripMenuItem.Size = new System.Drawing.Size(142, 20);
+            this.statusToolStripMenuItem.Text = "Aktualne wypożyczenia";
+            this.statusToolStripMenuItem.Visible = false;
             this.statusToolStripMenuItem.Click += new System.EventHandler(this.statusToolStripMenuItem_Click);
             // 
             // button2
@@ -760,7 +761,7 @@ namespace Projekt
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statusToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem statusToolStripMenuItem;
         public Button button1;
         public Button button2;
         public Button button3;

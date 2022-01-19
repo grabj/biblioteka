@@ -45,7 +45,7 @@ namespace Projekt.View
             {
                 if (loan.LoanerID == loanerR.ID)
                 {
-                    string info = $"{count}. \"{loan.Book.Title}\", {loan.Book.Author} \t Do dnia {loan.DateOfReturn}.";
+                    string info = $"{count}. \"{loan.Book.Title}\", {loan.Book.Author} \t do dnia {loan.DateOfReturn}.";
                     listBox1.Items.Add(info);
                     count++;
                     loanR = loan;

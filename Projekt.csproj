@@ -183,6 +183,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\MenuGuestView.resx">
+      <DependentUpon>MenuGuestView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MenuLibrarianForm.resx">
+      <DependentUpon>MenuLibrarianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MenuReaderForm.resx">
+      <DependentUpon>MenuReaderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ReturnForm.resx">
       <DependentUpon>ReturnForm.cs</DependentUpon>
     </EmbeddedResource>
