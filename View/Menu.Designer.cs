@@ -85,6 +85,15 @@ namespace Projekt
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.tabLoans = new System.Windows.Forms.TabPage();
+            this.button15 = new System.Windows.Forms.Button();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loanerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfLoanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfReturnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -97,6 +106,9 @@ namespace Projekt
             this.tabLibrarians.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).BeginInit();
+            this.tabLoans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,6 +186,7 @@ namespace Projekt
             this.button2.TabIndex = 3;
             this.button2.Text = "Zwróć";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -201,6 +214,7 @@ namespace Projekt
             this.tabControl1.Controls.Add(this.tabBooks);
             this.tabControl1.Controls.Add(this.tabUsers);
             this.tabControl1.Controls.Add(this.tabLibrarians);
+            this.tabControl1.Controls.Add(this.tabLoans);
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(12, 36);
             this.tabControl1.Multiline = true;
@@ -273,7 +287,6 @@ namespace Projekt
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(543, 314);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BookID
             // 
@@ -397,7 +410,6 @@ namespace Projekt
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(543, 338);
             this.dataGridView2.TabIndex = 13;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // iDCol
             // 
@@ -536,7 +548,6 @@ namespace Projekt
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(543, 338);
             this.dataGridView3.TabIndex = 17;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -619,6 +630,93 @@ namespace Projekt
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // tabLoans
+            // 
+            this.tabLoans.Controls.Add(this.button15);
+            this.tabLoans.Controls.Add(this.dataGridView4);
+            this.tabLoans.Location = new System.Drawing.Point(4, 31);
+            this.tabLoans.Name = "tabLoans";
+            this.tabLoans.Size = new System.Drawing.Size(555, 387);
+            this.tabLoans.TabIndex = 3;
+            this.tabLoans.Text = "Wypożyczenia";
+            this.tabLoans.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(396, 360);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(156, 23);
+            this.button15.TabIndex = 19;
+            this.button15.Text = "Odśwież";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.bookDataGridViewTextBoxColumn,
+            this.loanerDataGridViewTextBoxColumn,
+            this.dateOfLoanDataGridViewTextBoxColumn,
+            this.dateOfReturnDataGridViewTextBoxColumn});
+            this.dataGridView4.DataSource = this.loanBindingSource;
+            this.dataGridView4.Enabled = false;
+            this.dataGridView4.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView4.MultiSelect = false;
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView4.Size = new System.Drawing.Size(549, 351);
+            this.dataGridView4.TabIndex = 8;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 95;
+            // 
+            // bookDataGridViewTextBoxColumn
+            // 
+            this.bookDataGridViewTextBoxColumn.DataPropertyName = "BookID";
+            this.bookDataGridViewTextBoxColumn.HeaderText = "ID książki";
+            this.bookDataGridViewTextBoxColumn.Name = "bookDataGridViewTextBoxColumn";
+            this.bookDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // loanerDataGridViewTextBoxColumn
+            // 
+            this.loanerDataGridViewTextBoxColumn.DataPropertyName = "LoanerID";
+            this.loanerDataGridViewTextBoxColumn.HeaderText = "ID wypożyczającego";
+            this.loanerDataGridViewTextBoxColumn.Name = "loanerDataGridViewTextBoxColumn";
+            this.loanerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.loanerDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // dateOfLoanDataGridViewTextBoxColumn
+            // 
+            this.dateOfLoanDataGridViewTextBoxColumn.DataPropertyName = "DateOfLoan";
+            this.dateOfLoanDataGridViewTextBoxColumn.HeaderText = "Data wypożyczenia";
+            this.dateOfLoanDataGridViewTextBoxColumn.Name = "dateOfLoanDataGridViewTextBoxColumn";
+            this.dateOfLoanDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateOfReturnDataGridViewTextBoxColumn
+            // 
+            this.dateOfReturnDataGridViewTextBoxColumn.DataPropertyName = "DateOfReturn";
+            this.dateOfReturnDataGridViewTextBoxColumn.HeaderText = "Data zwrotu";
+            this.dateOfReturnDataGridViewTextBoxColumn.Name = "dateOfReturnDataGridViewTextBoxColumn";
+            this.dateOfReturnDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // loanBindingSource
+            // 
+            this.loanBindingSource.DataSource = typeof(Projekt.Loan);
+            // 
             // userBindingSource
             // 
             this.userBindingSource.DataSource = typeof(Projekt.User);
@@ -648,6 +746,9 @@ namespace Projekt
             this.tabLibrarians.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).EndInit();
+            this.tabLoans.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -710,6 +811,15 @@ namespace Projekt
         public Button button12;
         public Button button14;
         public Button button13;
+        public TabPage tabLoans;
+        public DataGridView dataGridView4;
+        private BindingSource loanBindingSource;
+        public Button button15;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn bookDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn loanerDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateOfLoanDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateOfReturnDataGridViewTextBoxColumn;
     }
 }
 

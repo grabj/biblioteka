@@ -55,7 +55,7 @@ namespace Projekt
         {
             Loans.Add(loan);
         }
-        public static void RemoveReader(uint ID)
+        public static void RemoveLoan(uint ID)
         {
             Loans.RemoveAll(Loans => Loans.ID == ID);
         }

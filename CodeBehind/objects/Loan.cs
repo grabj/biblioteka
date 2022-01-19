@@ -8,13 +8,15 @@ namespace Projekt
 {
     class Loan
     {
-        private uint _numOfLoans;
+        private static uint _numOfLoans = 0;
+
         private DateTime _dateOfLoan;
         private Reader _loaner;
         private Book _book;
 
         public Loan(DateTime dateOfLoan, Reader loaner, Book book)
         {
+            _numOfLoans++;
             loaner.BookCount++;
             book.IsAvailable = false;
             _dateOfLoan = dateOfLoan;
@@ -22,8 +24,17 @@ namespace Projekt
             book.DateOfReturning = DateOfReturn;
             _loaner = loaner;
             _book = book;
-            _numOfLoans++;
             ID = _numOfLoans;
+            LoanerID = _loaner.ID;
+            BookID = _book.BookID;
+        }
+
+        public void ReturnBook()
+        {
+            Loaner.BookCount--;
+            Book.IsAvailable = true;
+            Book.DateOfReturning = default;
+            DateOfLoan = default;
         }
 
         public uint ID { get; }
@@ -43,7 +54,7 @@ namespace Projekt
             set => _dateOfLoan = value;
         }
         public DateTime DateOfReturn { get; }
-
-
+        public uint LoanerID { get; }
+        public uint BookID { get; }
     }
 }

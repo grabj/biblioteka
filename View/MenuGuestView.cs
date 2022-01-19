@@ -15,6 +15,7 @@ namespace Projekt
             InitializeComponent();
             tabControl1.TabPages.Remove(tabLibrarians);
             tabControl1.TabPages.Remove(tabUsers);
+            tabControl1.TabPages.Remove(tabLoans);
         }
 
         public override void statusToolStripMenuItem_Click(object sender, EventArgs e)

@@ -18,6 +18,7 @@ namespace Projekt
             dataGridView1.DataSource = BookList.Books;
             dataGridView2.DataSource = ReaderList.Readers;
             dataGridView3.DataSource = LibrarianList.Librarians;
+            dataGridView4.DataSource = LoanList.Loans;
         }
         public virtual void button1_Click(object sender, EventArgs e)
         {
@@ -29,6 +30,7 @@ namespace Projekt
         {
             LogInView logInView1 = new LogInView();
             this.Dispose();
+            LogInView.ActiveReader = null;
             logInView1.Show();
         }
 
@@ -68,19 +70,10 @@ namespace Projekt
                 MessageBox.Show("Wybierz użytkownika do usunięcia.");
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             View.AddBookForm addBook = new View.AddBookForm();
             addBook.Show();
-        }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -88,11 +81,6 @@ namespace Projekt
             View.SignupForm signupForm = new View.SignupForm();
             signupForm.user_Type(1);
             signupForm.Show();
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -118,11 +106,7 @@ namespace Projekt
 
         private void button13_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.Rows.Clear();
-            dataGridView1.DataSource = BookList.Books;
-            dataGridView1.Update();
-            dataGridView1.Refresh();
+            Refresh_Menu();
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -154,6 +138,11 @@ namespace Projekt
             dataGridView3.DataSource = LibrarianList.Librarians;
             dataGridView3.Update();
             dataGridView3.Refresh();
+            dataGridView4.DataSource = null;
+            dataGridView4.Rows.Clear();
+            dataGridView4.DataSource = LoanList.Loans;
+            dataGridView4.Update();
+            dataGridView4.Refresh();
         }
 
         private void Menu_Load_1(object sender, EventArgs e)
@@ -171,6 +160,17 @@ namespace Projekt
             }
             else
                 MessageBox.Show("Wybierz użytkownika do usunięcia.");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            View.ReturnForm returnForm = new View.ReturnForm();
+            returnForm.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Refresh_Menu();
         }
     }
 

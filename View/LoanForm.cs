@@ -16,6 +16,8 @@ namespace Projekt.View
         {
             InitializeComponent();
 
+            textBox1.Enabled = true;
+
             if (LogInView.ActiveReader != null)
             {
                 loaner = LogInView.ActiveReader;
@@ -61,10 +63,11 @@ namespace Projekt.View
             if (labelBook.Text != "..." && labelLoaner.Text != "..." && loaner.BookCount < 3)
             {
                 MessageBox.Show($"Wypożyczenie przebiegło pomyślnie.", "Sukces");
-                this.Hide();
 
                 Loan loan = new Loan(DateTime.Today, loaner, bookL);
                 LoanList.AddLoan(loan);
+
+                this.Dispose();
             }
             else
             {
