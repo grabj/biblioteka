@@ -26,6 +26,12 @@ namespace Projekt
             loanForm.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            View.ReturnForm returnForm = new View.ReturnForm();
+            returnForm.Show();
+        }
+
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LogInView logInView1 = new LogInView();
@@ -58,24 +64,6 @@ namespace Projekt
             signupForm.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (dataGridView2.SelectedRows.Count > 0)
-            {
-                View.ConfirmDeleteReader confirmDeleteReader = new View.ConfirmDeleteReader();
-                confirmDeleteReader.FindReader(dataGridView2.SelectedCells[0].Value.ToString());
-                confirmDeleteReader.Show();
-            }
-            else
-                MessageBox.Show("Wybierz użytkownika do usunięcia.");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            View.AddBookForm addBook = new View.AddBookForm();
-            addBook.Show();
-        }
-
         private void button9_Click(object sender, EventArgs e)
         {
             View.SignupForm signupForm = new View.SignupForm();
@@ -83,9 +71,10 @@ namespace Projekt
             signupForm.Show();
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        { 
-            
+        private void button3_Click(object sender, EventArgs e)
+        {
+            View.AddBookForm addBook = new View.AddBookForm();
+            addBook.Show();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -98,15 +87,31 @@ namespace Projekt
             Refresh_Menu();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            View.EditBookForm editBook = new View.EditBookForm();
-            editBook.Show();
-        }
-
         private void button13_Click(object sender, EventArgs e)
         {
             Refresh_Menu();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Refresh_Menu();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                View.EditBookForm editBook = new View.EditBookForm();
+                editBook.FindBook(dataGridView1.SelectedCells[0].Value.ToString());
+                editBook.Show();
+            }
+            else
+                MessageBox.Show("Wybierz książkę do edycji.");
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -119,6 +124,35 @@ namespace Projekt
             }
             else
                 MessageBox.Show("Wybierz książkę do usunięcia.");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (dataGridView3.SelectedRows.Count > 0)
+            {
+                View.ConfirmDeleteLibrarian confirmDeleteLibrarian = new View.ConfirmDeleteLibrarian();
+                confirmDeleteLibrarian.FindLibrarian(dataGridView3.SelectedCells[0].Value.ToString());
+                confirmDeleteLibrarian.Show();
+            }
+            else
+                MessageBox.Show("Wybierz użytkownika do usunięcia.");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.SelectedRows.Count > 0)
+            {
+                View.ConfirmDeleteReader confirmDeleteReader = new View.ConfirmDeleteReader();
+                confirmDeleteReader.FindReader(dataGridView2.SelectedCells[0].Value.ToString());
+                confirmDeleteReader.Show();
+            }
+            else
+                MessageBox.Show("Wybierz użytkownika do usunięcia.");
+        }
+
+        private void Menu_Load_1(object sender, EventArgs e)
+        {
+            Globals.form = this;
         }
 
         public void Refresh_Menu()
@@ -143,34 +177,6 @@ namespace Projekt
             dataGridView4.DataSource = LoanList.Loans;
             dataGridView4.Update();
             dataGridView4.Refresh();
-        }
-
-        private void Menu_Load_1(object sender, EventArgs e)
-        {
-            Globals.form = this;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (dataGridView3.SelectedRows.Count > 0)
-            {
-                View.ConfirmDeleteLibrarian confirmDeleteLibrarian = new View.ConfirmDeleteLibrarian();
-                confirmDeleteLibrarian.FindLibrarian(dataGridView3.SelectedCells[0].Value.ToString());
-                confirmDeleteLibrarian.Show();
-            }
-            else
-                MessageBox.Show("Wybierz użytkownika do usunięcia.");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            View.ReturnForm returnForm = new View.ReturnForm();
-            returnForm.Show();
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            Refresh_Menu();
         }
     }
 

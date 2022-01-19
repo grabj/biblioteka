@@ -42,6 +42,7 @@ namespace Projekt.View
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +61,7 @@ namespace Projekt.View
             this.textBox2.Location = new System.Drawing.Point(124, 111);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(222, 20);
-            this.textBox2.TabIndex = 37;
+            this.textBox2.TabIndex = 1;
             // 
             // label5
             // 
@@ -105,7 +106,7 @@ namespace Projekt.View
             // 
             // button
             // 
-            this.button.Location = new System.Drawing.Point(163, 230);
+            this.button.Location = new System.Drawing.Point(158, 245);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(81, 23);
             this.button.TabIndex = 43;
@@ -127,23 +128,32 @@ namespace Projekt.View
             this.textBox1.Location = new System.Drawing.Point(124, 137);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(222, 20);
-            this.textBox1.TabIndex = 38;
+            this.textBox1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 13);
+            this.label3.Size = new System.Drawing.Size(127, 13);
             this.label3.TabIndex = 47;
-            this.label3.Text = "Wpisz nr ID książki do edycji:";
+            this.label3.Text = "Nr ID edytowanej książki:";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(186, 31);
+            this.textBox5.Location = new System.Drawing.Point(158, 31);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 20);
+            this.textBox5.Size = new System.Drawing.Size(188, 20);
             this.textBox5.TabIndex = 48;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(137, 221);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 49;
             // 
             // bookBindingSource
             // 
@@ -154,6 +164,7 @@ namespace Projekt.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 280);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
@@ -169,8 +180,10 @@ namespace Projekt.View
             this.MaximizeBox = false;
             this.Name = "EditBookForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edytuj ksiązkę";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.EditBookForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -192,5 +205,6 @@ namespace Projekt.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.BindingSource bookBindingSource;
         public System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label6;
     }
 }
