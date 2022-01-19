@@ -212,6 +212,7 @@ namespace Projekt.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wypożyczanie";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.LoanForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

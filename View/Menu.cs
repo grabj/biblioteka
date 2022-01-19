@@ -20,11 +20,6 @@ namespace Projekt
             dataGridView3.DataSource = LibrarianList.Librarians;
             dataGridView4.DataSource = LoanList.Loans;
         }
-        public virtual void button1_Click(object sender, EventArgs e)
-        {
-            View.LoanForm loanForm = new View.LoanForm();
-            loanForm.Show();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -100,6 +95,13 @@ namespace Projekt
         private void button8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void button1_Click(object sender, EventArgs e)
+        {
+            View.LoanForm loanForm = new View.LoanForm();
+            loanForm.FindBook(dataGridView1.SelectedCells[0].Value.ToString());
+            loanForm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

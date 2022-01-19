@@ -15,6 +15,10 @@ namespace Projekt.View
         public LoanForm()
         {
             InitializeComponent();
+        }
+
+        private void LoanForm_Load(object sender, EventArgs e)
+        {
 
             textBox1.Enabled = true;
 
@@ -30,6 +34,22 @@ namespace Projekt.View
 
             labelDate1.Text = DateTime.Today.ToString();
             labelDate2.Text = DateTime.Today.AddDays(30).ToString();
+
+            labelBook.Text = "\"" + bookL.Title + "\"";
+            textBox2.Text = _bookID.ToString();
+            textBox2.Enabled = false;
+        }
+
+        public void FindBook(string ID)
+        {
+            _bookID = Convert.ToUInt32(ID);
+            BookList.Books.ForEach(delegate (Book book)
+            {
+                if (book.BookID == _bookID)
+                {
+                    bookL = book;
+                }
+            });
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -47,15 +67,7 @@ namespace Projekt.View
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            foreach (var book in BookList.Books)
-            {
-                if (textBox2.Text == book.BookID.ToString())
-                {
-                    bookL = book;
 
-                    labelBook.Text = "\"" + book.Title + "\"";
-                }
-            }
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -77,5 +89,6 @@ namespace Projekt.View
 
         private Reader loaner;
         private Book bookL;
+        private uint _bookID;
     }
 }
