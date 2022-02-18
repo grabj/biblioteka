@@ -3,16 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Projekt
 {
-    class Loan
+    [Serializable()]
+    public class Loan
     {
+        [field: NonSerialized()]
         private static uint _numOfLoans = 0;
-
+        [field: NonSerialized()]
         private DateTime _dateOfLoan;
+        [field: NonSerialized()]
         private Reader _loaner;
+        [field: NonSerialized()]
         private Book _book;
+
+        public Loan()
+        {
+            _numOfLoans++;
+            DateOfReturn = _dateOfLoan.AddDays(30);
+            ID = _numOfLoans;
+            LoanerID = 0;
+            BookID = 0;
+            _dateOfLoan = default;
+        }
 
         public Loan(DateTime dateOfLoan, Reader loaner, Book book)
         {
@@ -31,13 +47,22 @@ namespace Projekt
 
         public void ReturnBook()
         {
-            Loaner.BookCount--;
-            Book.IsAvailable = true;
-            Book.DateOfReturning = default;
+            //Loaner.BookCount--;
+
             DateOfLoan = default;
+            DateOfReturn = default;
+
+            BookList.Books.ForEach(delegate (Book book)
+            {
+                if (book.BookID == BookID)
+                {
+                    book.IsAvailable = true;
+                    book.DateOfReturning = default;
+                }
+            });
         }
 
-        public uint ID { get; }
+        public uint ID { get; set; }
         public Reader Loaner
         {
             get => _loaner;
@@ -53,8 +78,8 @@ namespace Projekt
             get => _dateOfLoan;
             set => _dateOfLoan = value;
         }
-        public DateTime DateOfReturn { get; }
-        public uint LoanerID { get; }
-        public uint BookID { get; }
+        public DateTime DateOfReturn { get; set; }
+        public uint LoanerID { get; set; }
+        public uint BookID { get; set; }
     }
 }

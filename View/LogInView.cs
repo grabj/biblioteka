@@ -80,5 +80,15 @@ namespace Projekt
             return valid;
         }
         public static Reader ActiveReader = null;
+
+        private void LogInView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogInView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

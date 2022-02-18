@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="CodeBehind\data\helper.cs" />
     <Compile Include="CodeBehind\data\Lists.cs" />
+    <Compile Include="CodeBehind\data\Xml.cs" />
     <Compile Include="CodeBehind\objects\Admin.cs" />
     <Compile Include="CodeBehind\objects\Book.cs" />
     <Compile Include="CodeBehind\objects\Librarian.cs" />

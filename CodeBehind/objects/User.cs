@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Projekt
 {
+    [Serializable()]
     public abstract class User
     {
         private string _firstName;
@@ -13,6 +16,15 @@ namespace Projekt
         private string _email;
         private string _password;
         private string _login;
+
+        public User()
+        {
+            _firstName = null;
+            _lastName = null;
+            _email = null;
+            _password = null;
+            _login = null;
+        }
 
         public User(string firstName, string lastName, string email, string password, string login)
         {

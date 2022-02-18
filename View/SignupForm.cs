@@ -42,7 +42,7 @@ namespace Projekt.View
             }
         }
 
-        public void user_Type(int userType)
+        public void UserType(int userType)
         {
             _user = userType;
         }

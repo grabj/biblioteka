@@ -21,12 +21,6 @@ namespace Projekt
             dataGridView4.DataSource = LoanList.Loans;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            View.ReturnForm returnForm = new View.ReturnForm();
-            returnForm.Show();
-        }
-
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LogInView logInView1 = new LogInView();
@@ -45,22 +39,28 @@ namespace Projekt
         private void button10_Click(object sender, EventArgs e)
         {
             View.SignupForm signupForm = new View.SignupForm();
-            signupForm.user_Type(2);
+            signupForm.UserType(2);
             signupForm.Show();
         }
 
         private void signupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             View.SignupForm signupForm = new View.SignupForm();
-            signupForm.user_Type(2);
+            signupForm.UserType(2);
             signupForm.Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             View.SignupForm signupForm = new View.SignupForm();
-            signupForm.user_Type(1);
+            signupForm.UserType(1);
             signupForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            View.ReturnForm returnForm = new View.ReturnForm();
+            returnForm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -200,6 +200,11 @@ namespace Projekt
             dataGridView4.DataSource = LoanList.Loans;
             dataGridView4.Update();
             dataGridView4.Refresh();
+        }
+
+        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 

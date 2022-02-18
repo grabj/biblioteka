@@ -49,6 +49,7 @@ namespace Projekt.View
                 {
                     if (loan.LoanerID == loanerR.ID)
                     {
+                        bookR = loan.Book;
                         string info = $"{count}. \"{loan.Book.Title}\", {loan.Book.Author} \t do dnia {loan.DateOfReturn.ToShortDateString()}";
                         listBox1.Items.Add(info);
                         count++;
@@ -68,6 +69,8 @@ namespace Projekt.View
             {
                 loanR.ReturnBook();
 
+                loanerR.BookCount--;
+                
                 LoanList.RemoveLoan(loanR.ID);
 
                 MessageBox.Show($"Książka została zwrócona.", "Sukces");
@@ -78,5 +81,6 @@ namespace Projekt.View
 
         private Reader loanerR;
         private Loan loanR;
+        private Book bookR;
     }
 }

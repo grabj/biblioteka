@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Projekt
 {
-
     class ReaderList
     {
         public static List<Reader> Readers = new List<Reader>();
@@ -19,7 +20,6 @@ namespace Projekt
         {
             Readers.RemoveAll(Readers => Readers.ID == ID);
         }
-
     }
     class LibrarianList
     {
